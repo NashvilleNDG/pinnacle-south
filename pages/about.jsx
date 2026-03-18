@@ -59,7 +59,7 @@ export default function AboutPage() {
             <div className="absolute inset-0 bg-[#0A1D3A]/70" />
           </div>
 
-          <div className="relative mx-auto flex min-h-[60vh] max-w-7xl items-center justify-center px-6 text-center">
+          <div className="relative mx-auto flex min-h-[60vh] max-w-7xl items-center justify-center px-4 text-center sm:px-6">
             <motion.div variants={containerStagger} initial="hidden" animate="show" className="max-w-3xl">
               <motion.h1
                 variants={itemFade}
@@ -79,8 +79,8 @@ export default function AboutPage() {
         </section>
 
         {/* SECTION 2 — LEGACY / WHO WE ARE */}
-        <section aria-label="Who we are" className="bg-cream py-24">
-          <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-[1.05fr_1fr]">
+        <section aria-label="Who we are" className="bg-cream py-14 sm:py-20 md:py-24">
+          <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:gap-16 sm:px-6 lg:grid-cols-[1.05fr_1fr]">
             <motion.div
               {...fadeInUp}
               initial={{ opacity: 0, x: -40 }}
@@ -130,8 +130,8 @@ export default function AboutPage() {
         </section>
 
         {/* SECTION 3 — COMPREHENSIVE FF&E SERVICES */}
-        <section aria-label="Comprehensive FF&E services" className="bg-white py-24">
-          <div className="mx-auto max-w-6xl px-6">
+        <section aria-label="Comprehensive FF&E services" className="bg-white py-14 sm:py-20 md:py-24">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <motion.div {...fadeInUp} className="text-center">
               <div className="text-[11px] uppercase tracking-[0.22em] text-[#B0907A]">
                 WHAT WE DO
@@ -185,8 +185,8 @@ export default function AboutPage() {
         </section>
 
         {/* SECTION 4 — WHY CLIENTS CHOOSE US */}
-        <section aria-label="Why clients choose us" className="bg-[#FAF8F5] py-24">
-          <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2 lg:items-start">
+        <section aria-label="Why clients choose us" className="bg-[#FAF8F5] py-14 sm:py-20 md:py-24">
+          <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:gap-16 sm:px-6 lg:grid-cols-2 lg:items-start">
             <motion.div
               {...fadeInUp}
               initial={{ opacity: 0, x: -40 }}
@@ -246,8 +246,8 @@ export default function AboutPage() {
         </section>
 
         {/* SECTION 5 — CORE VALUES */}
-        <section aria-label="Core values" className="bg-white py-24">
-          <div className="mx-auto max-w-7xl px-6">
+        <section aria-label="Core values" className="bg-white py-14 sm:py-20 md:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <motion.div {...fadeInUp} className="text-center">
               <div className="text-[11px] uppercase tracking-[0.22em] text-[#B0907A]">
                 OUR CORE VALUES
@@ -326,9 +326,9 @@ export default function AboutPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-[#0A1D3A] py-24"
+          className="bg-[#0A1D3A] py-14 sm:py-20 md:py-24"
         >
-          <div className="mx-auto max-w-4xl px-6 text-center">
+          <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
             <h2 className="font-serif text-[38px] font-bold leading-[1.15] text-white sm:text-[44px]">
               Partner with Pinnacle South
             </h2>

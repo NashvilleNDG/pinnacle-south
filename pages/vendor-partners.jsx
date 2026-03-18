@@ -66,7 +66,7 @@ export default function VendorPartnersPage() {
             <div className="absolute inset-0 bg-[#0A1D3A]/70" />
           </div>
 
-          <div className="relative mx-auto flex min-h-[60vh] max-w-7xl items-center justify-center px-6 text-center">
+          <div className="relative mx-auto flex min-h-[60vh] max-w-7xl items-center justify-center px-4 text-center sm:px-6">
             <motion.div
               variants={containerStagger}
               initial="hidden"
@@ -94,9 +94,9 @@ export default function VendorPartnersPage() {
         <section
           id="partnerships-intro"
           aria-label="Vendor partnerships introduction"
-          className="bg-white py-24"
+          className="bg-white py-14 sm:py-20 md:py-24"
         >
-          <div className="mx-auto grid max-w-7xl items-start gap-16 px-6 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="mx-auto grid max-w-7xl items-start gap-10 px-4 sm:gap-16 sm:px-6 lg:grid-cols-[0.9fr_1.1fr]">
             <motion.div
               {...fadeInUp}
               initial={{ opacity: 0, x: -30 }}
@@ -156,9 +156,9 @@ export default function VendorPartnersPage() {
         <section
           id="vendor-categories"
           aria-label="Vendor categories"
-          className="bg-[#f5f0eb] py-24"
+          className="bg-[#f5f0eb] py-14 sm:py-20 md:py-24"
         >
-          <div className="mx-auto max-w-7xl px-6">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6">
             {categories.map((category, idx) => (
               <motion.section
                 key={category.category}
@@ -225,9 +225,9 @@ export default function VendorPartnersPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-[#0A1D3A] py-24"
+          className="bg-[#0A1D3A] py-14 sm:py-20 md:py-24"
         >
-          <div className="mx-auto max-w-4xl px-6 text-center">
+          <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
             <h2 className="font-serif text-[40px] font-bold leading-[1.1] text-white sm:text-[48px]">
               Interested in Partnering?
             </h2>

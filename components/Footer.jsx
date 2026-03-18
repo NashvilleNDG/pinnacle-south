@@ -4,8 +4,8 @@ import { Mail, MapPin, Phone } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="bg-[#0A1D3A] text-white">
-      <div className="mx-auto max-w-7xl px-6 pt-20 pb-14">
-        <div className="grid gap-14 text-center md:grid-cols-2 md:text-left lg:grid-cols-4">
+      <div className="mx-auto max-w-7xl px-4 pt-14 pb-10 sm:px-6 sm:pt-20 sm:pb-14">
+        <div className="grid gap-10 text-center sm:gap-14 md:grid-cols-2 md:text-left lg:grid-cols-4">
           <section aria-label="Footer about" className="flex flex-col items-center md:items-start">
             <img
               src="/images/logo-transparent.png"
@@ -106,7 +106,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/15">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-6 text-center text-[12px] text-white/90 md:flex-row md:items-center md:justify-between md:text-left">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-4 text-center text-[12px] text-white/90 sm:px-6 sm:py-6 md:flex-row md:items-center md:justify-between md:text-left">
           <div>© 2026 Pinnacle South. All rights reserved.</div>
           <div className="flex items-center justify-center gap-5 md:justify-end">
             <Link className="hover:text-white transition-colors" href="/privacy">

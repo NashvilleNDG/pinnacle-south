@@ -54,7 +54,7 @@ export default function ContactPage() {
             <div className="absolute inset-0 bg-[#0A1D3A]/70" />
           </div>
 
-          <div className="relative mx-auto flex min-h-[60vh] max-w-7xl items-center px-6">
+          <div className="relative mx-auto flex min-h-[60vh] max-w-7xl items-center px-4 sm:px-6">
             <motion.div
               variants={containerStagger}
               initial="hidden"
@@ -88,15 +88,15 @@ export default function ContactPage() {
         <section
           id="contact-main"
           aria-label="Contact form and details"
-          className="bg-cream py-20"
+          className="bg-cream py-12 sm:py-16 md:py-20"
         >
-          <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
+          <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:gap-10 sm:px-6 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
             {/* Left — Form */}
             <motion.section
               variants={fadeInUp}
               initial="initial"
               whileInView="whileInView"
-              className="rounded-sm border border-[#e5ddd4] bg-white p-8 sm:p-10"
+              className="rounded-sm border border-[#e5ddd4] bg-white p-5 sm:p-8 md:p-10"
             >
               <h2 className="font-serif text-[28px] font-bold text-[#0f2744]">
                 Start the Conversation
@@ -357,9 +357,9 @@ export default function ContactPage() {
           variants={fadeInUp}
           initial="initial"
           whileInView="whileInView"
-          className="bg-[#0A1D3A] py-24"
+          className="bg-[#0A1D3A] py-14 sm:py-20 md:py-24"
         >
-          <div className="mx-auto max-w-4xl px-6 text-center text-white">
+          <div className="mx-auto max-w-4xl px-4 text-center text-white sm:px-6">
             <div className="text-[11px] uppercase tracking-[0.22em] text-white/60">
               Ready to Begin?
             </div>

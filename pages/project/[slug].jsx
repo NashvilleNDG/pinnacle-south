@@ -1,9 +1,31 @@
+import fs from "fs";
+import path from "path";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowLeft, ArrowRight, CheckCircle2, MapPin } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle2, MapPin, X } from "lucide-react";
 import Head from "next/head";
 import Layout from "@/components/Layout";
 import projects from "@/data/projects.json";
+
+const IMAGE_EXT = [".jpg", ".jpeg", ".png", ".webp", ".gif"];
+const HERO_NAMES = ["hero.jpg", "hero.jpeg", "hero.png", "hero.webp"];
+
+function getGalleryFromFolder(folderName) {
+  const dir = path.join(process.cwd(), "public", "images", folderName);
+  if (!fs.existsSync(dir)) return [];
+  const files = fs.readdirSync(dir);
+  return files
+    .filter((file) => {
+      const ext = path.extname(file).toLowerCase();
+      const base = path.basename(file).toLowerCase();
+      if (!IMAGE_EXT.includes(ext)) return false;
+      if (HERO_NAMES.includes(base)) return false;
+      return true;
+    })
+    .sort()
+    .map((file) => `/images/${folderName}/${file}`);
+}
 
 export async function getStaticPaths() {
   return {
@@ -13,7 +35,13 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const project = projects.find((p) => p.slug === params.slug) || null;
+  let project = projects.find((p) => p.slug === params.slug) || null;
+  if (project && project.folder) {
+    const folderGallery = getGalleryFromFolder(project.folder);
+    if (folderGallery.length > 0) {
+      project = { ...project, gallery: folderGallery };
+    }
+  }
   const relatedProjects = projects.filter((p) => p.slug !== params.slug).slice(0, 3);
   return {
     props: {
@@ -47,6 +75,10 @@ const itemFade = {
 export default function ProjectDetailPage({ project, relatedProjects }) {
   if (!project) return null;
 
+  const heroImage =
+    project.image ||
+    (project.folder ? `/images/${project.folder}/hero.jpg` : null);
+
   const description =
     project.summary || "FF&E project by Pinnacle South";
 
@@ -55,7 +87,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
     "@type": "CreativeWork",
     name: project.name,
     description,
-    image: project.image ? `https://www.pinnaclesouth.net${project.image}` : undefined,
+    image: heroImage ? `https://www.pinnaclesouth.net${heroImage}` : undefined,
     url: `https://www.pinnaclesouth.net/project/${project.slug}/`,
     about: project.brand,
     locationCreated: project.location,
@@ -67,7 +99,19 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
   };
 
   const gallery = Array.isArray(project.gallery) ? project.gallery : [];
-  const gallerySlots = [gallery[0], gallery[1], gallery[2]];
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  useEffect(() => {
+    if (!lightboxOpen) return;
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") setLightboxOpen(false);
+      if (e.key === "ArrowLeft") setLightboxIndex((i) => (i <= 0 ? gallery.length - 1 : i - 1));
+      if (e.key === "ArrowRight") setLightboxIndex((i) => (i >= gallery.length - 1 ? 0 : i + 1));
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [lightboxOpen, gallery.length]);
 
   return (
     <Layout headerVariant="transparent">
@@ -76,7 +120,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
         <meta name="description" content={description} />
         <meta property="og:title" content={`${project.name} | Pinnacle South`} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={project.image || "/images/hero/projects-hero.jpg"} />
+        <meta property="og:image" content={heroImage || "/images/hero/projects-hero.jpg"} />
         <meta name="twitter:card" content="summary_large_image" />
         <script
           type="application/ld+json"
@@ -89,14 +133,14 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
         <section id="hero" aria-label="Project hero" className="relative h-[70vh]">
           <div className="absolute inset-0">
             <img
-              src={project.image}
+              src={heroImage}
               alt={`${project.name} project hero image`}
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-[#0A1D3A]/70" />
           </div>
 
-          <div className="absolute bottom-0 left-0 p-12">
+          <div className="absolute inset-x-0 bottom-0 flex flex-col items-center p-12 text-center">
             <motion.div variants={containerStagger} initial="hidden" animate="show" className="max-w-3xl">
               <motion.div variants={itemFade}>
                 <Link
@@ -107,7 +151,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
                 </Link>
               </motion.div>
 
-              <motion.div variants={itemFade} className="mt-4 flex flex-wrap items-center gap-3">
+              <motion.div variants={itemFade} className="mt-4 flex flex-wrap items-center justify-center gap-3">
                 <span className="rounded-sm bg-white/20 px-4 py-1.5 text-[13px] font-semibold text-white backdrop-blur-sm">
                   {project.brand}
                 </span>
@@ -119,7 +163,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
 
               <motion.h1
                 variants={itemFade}
-                className="mt-3 max-w-[600px] font-serif text-[44px] font-bold leading-[1.1] text-white sm:text-[52px]"
+                className="mt-3 font-serif text-[44px] font-bold leading-[1.1] text-white sm:text-[52px]"
               >
                 {project.name}
               </motion.h1>
@@ -146,23 +190,80 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
                 </section>
               ) : null}
 
-              <section aria-label="Project gallery">
-                <h2 className="mt-10 text-[24px] font-bold text-textDark">Project Gallery</h2>
-                <div className="mt-5 grid gap-2 md:grid-cols-3">
-                  {gallerySlots.map((src, idx) =>
-                    src ? (
-                      <img
+              {gallery.length > 0 ? (
+                <section aria-label="Project gallery">
+                  <h2 className="mt-10 text-[24px] font-bold text-textDark">Project Gallery</h2>
+                  <div className="mt-5 grid gap-2 grid-cols-2 md:grid-cols-3">
+                    {gallery.map((src, idx) => (
+                      <button
                         key={src}
-                        src={src}
-                        alt={`${project.name} gallery image ${idx + 1}`}
-                        className="aspect-[4/3] w-full object-cover"
-                      />
-                    ) : (
-                      <div key={`ph-${idx}`} className="aspect-[4/3] w-full bg-gray-200" />
-                    )
-                  )}
+                        type="button"
+                        onClick={() => {
+                          setLightboxIndex(idx);
+                          setLightboxOpen(true);
+                        }}
+                        className="aspect-[4/3] w-full overflow-hidden rounded-sm focus:outline-none focus:ring-2 focus:ring-[#0A1D3A] focus:ring-offset-2"
+                      >
+                        <img
+                          src={src}
+                          alt={`${project.name} gallery image ${idx + 1}`}
+                          className="h-full w-full object-cover"
+                        />
+                      </button>
+                    ))}
+                  </div>
+                </section>
+              ) : null}
+
+              {lightboxOpen && gallery.length > 0 ? (
+                <div
+                  className="fixed inset-0 z-50 flex items-center justify-center bg-black/95"
+                  role="dialog"
+                  aria-modal="true"
+                  aria-label="Image gallery lightbox"
+                >
+                  <button
+                    type="button"
+                    onClick={() => setLightboxOpen(false)}
+                    className="absolute right-4 top-4 z-10 rounded-full p-2 text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white"
+                    aria-label="Close lightbox"
+                  >
+                    <X className="h-8 w-8" />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setLightboxIndex((i) => (i <= 0 ? gallery.length - 1 : i - 1))}
+                    className="absolute left-4 top-1/2 z-10 -translate-y-1/2 rounded-full p-2 text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white"
+                    aria-label="Previous image"
+                  >
+                    <ArrowLeft className="h-8 w-8" />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setLightboxIndex((i) => (i >= gallery.length - 1 ? 0 : i + 1))}
+                    className="absolute right-4 top-1/2 z-10 -translate-y-1/2 rounded-full p-2 text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white"
+                    aria-label="Next image"
+                  >
+                    <ArrowRight className="h-8 w-8" />
+                  </button>
+                  <div
+                    className="absolute inset-0 cursor-pointer"
+                    onClick={() => setLightboxOpen(false)}
+                    aria-hidden="true"
+                  />
+                  <div className="relative z-10 mx-16 max-h-[90vh] max-w-[90vw]">
+                    <img
+                      src={gallery[lightboxIndex]}
+                      alt={`${project.name} gallery image ${lightboxIndex + 1} of ${gallery.length}`}
+                      className="max-h-[90vh] max-w-full object-contain"
+                      onClick={(e) => e.stopPropagation()}
+                    />
+                    <div className="mt-2 text-center text-sm text-white/80">
+                      {lightboxIndex + 1} / {gallery.length}
+                    </div>
+                  </div>
                 </div>
-              </section>
+              ) : null}
 
               {project.spotlight ? (
                 <section aria-label="Project spotlight">
@@ -209,7 +310,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
                   </div>
                 </div>
 
-                <div className="bg-navyDark p-6">
+                <div className="bg-[#0A1D3A] p-6">
                   <h3 className="text-[18px] font-semibold text-white">Start a Similar Project</h3>
                   <p className="mt-2 text-[14px] leading-6 text-white/70">
                     Let&apos;s discuss how Pinnacle South can deliver for your next hospitality development.
@@ -279,7 +380,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-navyDark py-20"
+          className="bg-[#0A1D3A] py-20"
         >
           <div className="mx-auto max-w-4xl px-6 text-center">
             <h2 className="font-serif text-[44px] font-bold leading-[1.1] text-white">

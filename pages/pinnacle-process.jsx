@@ -148,7 +148,7 @@ export default function PinnacleProcessPage() {
             <div className="absolute inset-0 bg-[#0A1D3A]/70" />
           </div>
 
-          <div className="relative mx-auto flex min-h-[60vh] max-w-7xl items-center justify-center px-6 text-center">
+          <div className="relative mx-auto flex min-h-[60vh] max-w-7xl items-center justify-center px-4 text-center sm:px-6">
             <motion.div variants={containerStagger} initial="hidden" animate="show" className="max-w-3xl">
               <motion.h1
                 variants={itemFade}
@@ -168,8 +168,8 @@ export default function PinnacleProcessPage() {
         </section>
 
         {/* SECTION 2 — THE 6 PROCESS STEPS */}
-        <section id="process-steps" aria-label="Process steps" className="bg-cream pb-28 pt-16">
-          <div className="mx-auto max-w-7xl px-6">
+        <section id="process-steps" aria-label="Process steps" className="bg-cream pb-20 pt-12 sm:pb-28 sm:pt-16">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <div className="space-y-24">
               {steps.map((s, idx) => {
                 const Icon = s.icon;
@@ -234,8 +234,8 @@ export default function PinnacleProcessPage() {
         </section>
 
         {/* SECTION 3 — WHY THE PINNACLE PROCESS MATTERS */}
-        <section id="why-it-matters" aria-label="Why the process matters" className="bg-white py-24">
-          <div className="mx-auto max-w-7xl px-6">
+        <section id="why-it-matters" aria-label="Why the process matters" className="bg-white py-14 sm:py-20 md:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <motion.div {...fadeInUp} className="text-center">
               <div className="text-[12px] uppercase tracking-eyebrow text-copper">THE DIFFERENCE</div>
               <h2 className="mt-6 font-serif text-[44px] font-bold leading-[1.1] text-textDark">
@@ -291,9 +291,9 @@ export default function PinnacleProcessPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-[#0A1D3A] py-24"
+          className="bg-[#0A1D3A] py-14 sm:py-20 md:py-24"
         >
-          <div className="mx-auto max-w-4xl px-6 text-center">
+          <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
             <h2 className="font-serif text-[48px] font-bold leading-[1.1] text-white">
               Let&apos;s Discuss Your Project
             </h2>

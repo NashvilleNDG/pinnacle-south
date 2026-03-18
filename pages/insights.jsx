@@ -80,7 +80,7 @@ export default function InsightsPage({ posts }) {
             <div className="absolute inset-0 bg-[#0A1D3A]/70" />
           </div>
 
-          <div className="relative mx-auto flex min-h-[60vh] max-w-7xl items-center justify-center px-6 text-center">
+          <div className="relative mx-auto flex min-h-[60vh] max-w-7xl items-center justify-center px-4 text-center sm:px-6">
             <motion.div
               variants={containerStagger}
               initial="hidden"
@@ -110,7 +110,7 @@ export default function InsightsPage({ posts }) {
           aria-label="Insights articles"
           className="bg-[#f5f0eb] pt-16 pb-24"
         >
-          <div className="mx-auto max-w-7xl px-6">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6">
             {/* Category tabs removed */}
 
             {!featuredPost ? (

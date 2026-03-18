@@ -161,7 +161,7 @@ export default function HomePage({ featuredProjects, latestPosts }) {
             <div className="absolute inset-0 bg-gradient-to-r from-[rgba(15,39,68,0.80)] to-[rgba(15,39,68,0.35)]" />
           </div>
 
-          <div className="relative mx-auto flex min-h-screen max-w-7xl items-center px-6 py-24 lg:px-16">
+          <div className="relative mx-auto flex min-h-screen max-w-7xl items-center px-4 py-20 sm:px-6 sm:py-24 lg:px-16">
             <motion.div
               variants={containerStagger}
               initial="hidden"
@@ -177,7 +177,7 @@ export default function HomePage({ featuredProjects, latestPosts }) {
 
               <motion.h1
                 variants={itemFade}
-                className="mt-6 font-serif text-white text-[56px] leading-[1.02] lg:text-[64px]"
+                className="mt-6 font-serif text-white text-[36px] leading-[1.08] sm:text-[48px] md:text-[56px] lg:text-[64px]"
               >
                 <span className="block font-bold">Elevating Hospitality</span>
                 <span className="block italic font-bold">Through Expert FF&amp;E</span>
@@ -185,7 +185,7 @@ export default function HomePage({ featuredProjects, latestPosts }) {
 
               <motion.p
                 variants={itemFade}
-                className="mt-6 max-w-[480px] text-[18px] leading-[1.7] text-white/90"
+                className="mt-4 sm:mt-6 max-w-[480px] text-[16px] leading-[1.7] text-white/90 sm:text-[18px]"
               >
                 Pinnacle South partners with leading hotel brands to deliver design-driven,
                 procurement-focused, and execution-ready FF&amp;E solutions across the Southeast.
@@ -208,22 +208,22 @@ export default function HomePage({ featuredProjects, latestPosts }) {
             </motion.div>
           </div>
 
-          <div className="absolute bottom-8 right-8 flex flex-col items-center gap-2 text-white/60">
+          <div className="absolute bottom-8 right-4 hidden flex-col items-center gap-2 text-white/60 sm:right-8 sm:flex">
             <div className="text-[11px] tracking-[0.35em] [writing-mode:vertical-rl]">SCROLL</div>
             <ArrowDown className="h-4 w-4" />
           </div>
 
-          <div className="absolute inset-x-0 bottom-0 bg-[rgba(10,29,58,0.9)] py-5">
-            <div className="mx-auto max-w-7xl px-6 lg:px-16">
-              <div className="grid grid-cols-3 gap-10">
+          <div className="absolute inset-x-0 bottom-0 bg-[rgba(10,29,58,0.9)] py-4 sm:py-5">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-16">
+              <div className="grid grid-cols-3 gap-4 sm:gap-8 md:gap-10">
                 {[
                   { value: "25+", label: "YEARS OF EXPERIENCE" },
                   { value: "200+", label: "PROJECTS COMPLETED" },
                   { value: "15+", label: "STATES SERVED" },
                 ].map((s) => (
                   <div key={s.label} className="text-center">
-                    <div className="text-[28px] font-bold leading-none text-white">{s.value}</div>
-                    <div className="mt-2 text-[11px] uppercase tracking-eyebrow text-white/60">
+                    <div className="text-[22px] font-bold leading-none text-white sm:text-[28px]">{s.value}</div>
+                    <div className="mt-1 text-[9px] uppercase tracking-wider text-white/60 sm:mt-2 sm:text-[11px] sm:tracking-eyebrow">
                       {s.label}
                     </div>
                   </div>
@@ -233,40 +233,45 @@ export default function HomePage({ featuredProjects, latestPosts }) {
           </div>
         </section>
 
-        {/* SECTION 3 — TRUSTED BRANDS BAR */}
+        {/* SECTION 3 — TRUSTED BRANDS BAR (auto-slide carousel) */}
         <section className="bg-white border-b border-border">
-          <div className="mx-auto max-w-7xl px-6 py-6">
+          <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 sm:py-6">
             <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
-              <div className="flex items-center gap-6">
+              <div className="flex shrink-0 items-center gap-6">
                 <div className="text-[11px] uppercase tracking-[0.28em] text-processMuted leading-4">
                   <div>TRUSTED BY LEADING</div>
                   <div>HOSPITALITY BRANDS</div>
                 </div>
                 <div className="hidden h-8 w-px bg-border md:block" aria-hidden="true" />
               </div>
-              <div className="flex w-full gap-10 overflow-x-auto pb-1 md:w-auto md:justify-end md:overflow-visible md:pb-0">
-                {[
-                  "Courtyard by Marriott",
-                  "Homewood Suites",
-                  "Hampton Inn & Suites",
-                  "Marriott",
-                  "Hilton",
-                ].map((b) => (
-                  <span
-                    key={b}
-                    className="shrink-0 text-[15px] font-medium text-textDark"
-                  >
-                    {b}
-                  </span>
-                ))}
+              <div className="w-full overflow-hidden md:min-w-0">
+                <div className="flex w-max animate-marquee gap-10 pr-10 md:gap-12 md:pr-12">
+                  {(() => {
+                    const brands = [
+                      "Courtyard by Marriott",
+                      "Homewood Suites",
+                      "Hampton Inn & Suites",
+                      "Marriott",
+                      "Hilton",
+                    ];
+                    return [...brands, ...brands].map((b, i) => (
+                      <span
+                        key={`${b}-${i}`}
+                        className="shrink-0 text-[15px] font-medium text-textDark"
+                      >
+                        {b}
+                      </span>
+                    ));
+                  })()}
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* SECTION 4 — ABOUT PREVIEW */}
-        <section className="bg-cream py-28">
-          <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
+        <section className="bg-cream pt-16 pb-14 sm:pt-24 md:pt-28 md:pb-20">
+          <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:gap-16 sm:px-6 lg:grid-cols-2">
             <motion.div
               {...fadeInUp}
               initial={{ opacity: 0, x: -40 }}
@@ -300,7 +305,7 @@ export default function HomePage({ featuredProjects, latestPosts }) {
                   About Pinnacle South
                 </span>
               </div>
-              <h2 className="mt-6 font-serif text-[40px] leading-[1.15] text-textDark">
+              <h2 className="mt-6 font-serif text-[28px] leading-[1.2] text-textDark sm:text-[36px] md:text-[40px]">
                 A Trusted Partner in Hospitality FF&amp;E
               </h2>
               <p className="mt-6 text-[16px] leading-[1.8] text-textMuted">
@@ -327,15 +332,15 @@ export default function HomePage({ featuredProjects, latestPosts }) {
         </section>
 
         {/* SECTION 5 — PROCESS PREVIEW (CARDS GRID) */}
-        <section className="bg-cream py-24">
-          <div className="mx-auto max-w-7xl px-6">
+        <section className="bg-cream pt-12 pb-16 sm:pt-16 sm:pb-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <motion.div {...fadeInUp} className="text-center">
               <div className="inline-flex items-center gap-3 justify-center">
                 <span className="text-[12px] uppercase tracking-eyebrow text-[#B8977E]">
                   Our Process
                 </span>
               </div>
-              <h2 className="mt-6 font-serif text-[42px] leading-[1.15] text-textDark">
+              <h2 className="mt-4 font-serif text-[28px] leading-[1.2] text-textDark sm:mt-6 sm:text-[36px] md:text-[42px]">
                 The Pinnacle Process
               </h2>
               <p className="mt-4 mx-auto max-w-[520px] text-[16px] leading-7 text-textMuted">
@@ -345,26 +350,25 @@ export default function HomePage({ featuredProjects, latestPosts }) {
             </motion.div>
 
               <div className="mt-12">
-              {/* 6-col grid to create a balanced staggered pyramid */}
-              <div className="grid gap-6" style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)" }}>
+              {/* 1 col on mobile; 6-col staggered pyramid on md+ */}
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-6">
                 {processSteps.map((s, idx) => {
                   const Icon = s.icon;
-                  const gridCol =
+                  const colClass =
                     idx === 0
-                      ? "1 / 3"
+                      ? "md:col-span-2"
                       : idx === 1
-                        ? "3 / 5"
+                        ? "md:col-span-2"
                         : idx === 2
-                          ? "5 / 7"
+                          ? "md:col-span-2"
                           : idx === 3
-                            ? "2 / 4"
-                            : "4 / 6";
+                            ? "md:col-start-2 md:col-span-2"
+                            : "md:col-start-4 md:col-span-2";
                   return (
                     <motion.article
                       key={s.key}
                       {...fadeInUp}
-                      style={{ gridColumn: gridCol }}
-                      className="rounded-md border border-border bg-white p-6 shadow-sm"
+                      className={`rounded-md border border-border bg-white p-6 shadow-sm ${colClass}`}
                     >
                         <div className="flex flex-col items-center text-center gap-4">
                           <div className="grid h-14 w-14 place-items-center rounded-md bg-[#0A1D3A]">
@@ -399,16 +403,16 @@ export default function HomePage({ featuredProjects, latestPosts }) {
         </section>
 
         {/* SECTION 6 — FEATURED PROJECTS */}
-        <section className="bg-[#0A1D3A] py-24">
-          <div className="mx-auto max-w-7xl px-6">
+        <section className="bg-[#0A1D3A] py-14 sm:py-20 md:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
               <motion.div {...fadeInUp}>
-                <div className="inline-flex items-center gap-3 justify-center mx-auto">
+                <div className="inline-flex items-center gap-3 justify-center mx-auto md:mx-0">
                   <span className="text-[12px] uppercase tracking-eyebrow text-[#B8977E]">
                     Our Work
                   </span>
                 </div>
-                <h2 className="mt-6 font-serif text-[42px] leading-[1.15] text-white">
+                <h2 className="mt-4 font-serif text-[28px] leading-[1.15] text-white sm:mt-6 sm:text-[36px] md:text-[42px]">
                   Featured Projects
                 </h2>
               </motion.div>
@@ -419,7 +423,7 @@ export default function HomePage({ featuredProjects, latestPosts }) {
               </motion.div>
             </div>
 
-            <div className="mt-14 grid gap-6">
+            <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-6">
               {/* Top wide card */}
               {featuredProjects[0] ? (
                 <motion.article
@@ -432,7 +436,7 @@ export default function HomePage({ featuredProjects, latestPosts }) {
                     href={`/project/${featuredProjects[0].slug}`}
                     className="group relative block overflow-hidden rounded-md bg-gray-200 shadow-soft"
                   >
-                    <div className="aspect-[16/6]">
+                    <div className="aspect-[16/9] sm:aspect-[16/6]">
                       <img
                         src={featuredProjects[0].image}
                         alt={`${featuredProjects[0].name} project image`}
@@ -440,12 +444,12 @@ export default function HomePage({ featuredProjects, latestPosts }) {
                       />
                     </div>
                     <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(15,39,68,0.92)_0%,rgba(15,39,68,0.45)_55%,rgba(0,0,0,0)_100%)] transition-colors group-hover:bg-[linear-gradient(to_top,rgba(15,39,68,0.95)_0%,rgba(15,39,68,0.55)_55%,rgba(0,0,0,0)_100%)]" />
-                    <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-8">
-                      <div>
+                    <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-4 sm:p-8">
+                      <div className="min-w-0">
                         <div className="text-[11px] uppercase tracking-eyebrow text-[#B8977E]">
                           {featuredProjects[0].brand}
                         </div>
-                        <h3 className="mt-2 font-serif text-[28px] leading-[1.15] text-white">
+                        <h3 className="mt-2 font-serif text-[20px] leading-[1.2] text-white sm:text-[28px] sm:leading-[1.15]">
                           {featuredProjects[0].name}
                         </h3>
                         <div className="mt-2 inline-flex items-center gap-2 text-[13px] text-white/70">
@@ -482,10 +486,10 @@ export default function HomePage({ featuredProjects, latestPosts }) {
                         />
                       </div>
                       <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(15,39,68,0.92)_0%,rgba(15,39,68,0.45)_55%,rgba(0,0,0,0)_100%)] transition-colors group-hover:bg-[linear-gradient(to_top,rgba(15,39,68,0.95)_0%,rgba(15,39,68,0.55)_55%,rgba(0,0,0,0)_100%)]" />
-                      <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-7">
-                        <div>
+                      <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-4 sm:p-7">
+                        <div className="min-w-0">
                           <div className="text-[11px] uppercase tracking-eyebrow text-[#B8977E]">{p.brand}</div>
-                          <h3 className="mt-2 font-serif text-[22px] leading-[1.15] text-white">{p.name}</h3>
+                          <h3 className="mt-2 font-serif text-[18px] leading-[1.2] text-white sm:text-[22px] sm:leading-[1.15]">{p.name}</h3>
                           <div className="mt-2 inline-flex items-center gap-2 text-[13px] text-white/70">
                             <MapPin className="h-4 w-4" /> {p.location}
                           </div>
@@ -503,8 +507,8 @@ export default function HomePage({ featuredProjects, latestPosts }) {
         </section>
 
         {/* SECTION 7 — WHY PINNACLE SOUTH */}
-        <section className="bg-white py-24">
-          <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-[0.55fr_1fr]">
+        <section className="bg-white py-14 sm:py-20 md:py-24">
+          <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:gap-16 sm:px-6 lg:grid-cols-[0.55fr_1fr]">
             <motion.div
               {...fadeInUp}
               initial={{ opacity: 0, x: -40 }}
@@ -516,7 +520,7 @@ export default function HomePage({ featuredProjects, latestPosts }) {
                   Why Pinnacle South
                 </span>
               </div>
-              <h2 className="mt-6 font-serif text-[40px] leading-[1.1] text-textDark">
+              <h2 className="mt-6 font-serif text-[28px] leading-[1.15] text-textDark sm:text-[36px] md:text-[40px] md:leading-[1.1]">
                 <span className="block font-bold">Built on Trust,</span>
                 <span className="block italic font-normal text-processMuted">
                   Delivered with Precision
@@ -594,7 +598,7 @@ export default function HomePage({ featuredProjects, latestPosts }) {
                         hidden: { opacity: 0, y: 30 },
                         show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
                       }}
-                      className="flex h-full flex-col gap-3 bg-white p-8"
+                      className="flex h-full flex-col gap-3 bg-white p-5 sm:p-8"
                     >
                       <div className="flex items-start gap-3">
                         <div className="grid h-8 w-8 place-items-center rounded-full bg-[#F4E6D8] text-[#B8977E]">
@@ -612,8 +616,8 @@ export default function HomePage({ featuredProjects, latestPosts }) {
         </section>
 
         {/* SECTION 8 — BRANDS & NETWORK */}
-        <section className="bg-cream py-24">
-          <div className="mx-auto max-w-7xl px-6">
+        <section className="bg-cream py-14 sm:py-20 md:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <motion.div {...fadeInUp}>
               <div className="inline-flex items-center gap-3">
                 <span className="h-px w-8 bg-[#B8977E]" aria-hidden="true" />
@@ -621,12 +625,12 @@ export default function HomePage({ featuredProjects, latestPosts }) {
                   Our Network
                 </span>
               </div>
-              <h2 className="mt-6 max-w-[480px] font-serif text-[42px] leading-[1.15] text-textDark">
+              <h2 className="mt-4 max-w-[480px] font-serif text-[28px] leading-[1.2] text-textDark sm:mt-6 sm:text-[36px] md:text-[42px] md:leading-[1.15]">
                 Brands We Serve &amp; Partners We Trust
               </h2>
             </motion.div>
 
-            <div className="mt-12 grid gap-6 md:grid-cols-2">
+            <div className="mt-8 grid gap-4 sm:mt-12 sm:gap-6 md:grid-cols-2">
               {[
                 {
                   href: "/hotel-brands",
@@ -660,9 +664,9 @@ export default function HomePage({ featuredProjects, latestPosts }) {
                     <span className="absolute right-5 top-5 grid h-10 w-10 place-items-center rounded-full bg-white/30 text-white">
                       <ArrowUpRight className="h-5 w-5" />
                     </span>
-                    <div className="absolute bottom-0 left-0 p-8">
+                    <div className="absolute bottom-0 left-0 p-4 sm:p-8">
                       <div className="text-[11px] uppercase tracking-eyebrow text-copper">Explore</div>
-                      <h3 className="mt-2 font-serif text-[28px] text-white">{c.title}</h3>
+                      <h3 className="mt-2 font-serif text-[22px] text-white sm:text-[28px]">{c.title}</h3>
                       <p className="mt-3 max-w-[420px] text-[14px] leading-6 text-white/80">
                         {c.description}
                       </p>
@@ -675,15 +679,15 @@ export default function HomePage({ featuredProjects, latestPosts }) {
         </section>
 
         {/* SECTION 9 — INSIGHTS PREVIEW */}
-        <section className="bg-cream py-24">
-          <div className="mx-auto max-w-7xl px-6">
+        <section className="bg-cream py-14 sm:py-20 md:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <motion.div {...fadeInUp} className="text-center">
               <div className="inline-flex items-center justify-center gap-3">
                 <span className="h-px w-10 bg-copper" aria-hidden="true" />
                 <span className="text-[12px] uppercase tracking-eyebrow text-[#2B374B]">Insights</span>
                 <span className="h-px w-10 bg-copper" aria-hidden="true" />
               </div>
-              <h2 className="mt-6 font-serif text-[44px] leading-[1.1] text-textDark">
+              <h2 className="mt-4 font-serif text-[28px] leading-[1.2] text-textDark sm:mt-6 sm:text-[36px] md:text-[44px] md:leading-[1.1]">
                 Latest from Pinnacle South
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-[18px] leading-7 text-textMuted">
@@ -696,7 +700,7 @@ export default function HomePage({ featuredProjects, latestPosts }) {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
-              className="mt-12 grid gap-6 md:grid-cols-3"
+              className="mt-8 grid gap-4 sm:mt-12 sm:gap-6 md:grid-cols-3"
             >
               {latestPosts.map((p, idx) => (
                 <motion.article
@@ -753,13 +757,13 @@ export default function HomePage({ featuredProjects, latestPosts }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-[#0A1D3A] py-24"
+          className="bg-[#0A1D3A] py-14 sm:py-20 md:py-24"
         >
-          <div className="mx-auto max-w-4xl px-6 text-center">
-            <h2 className="font-serif text-[44px] leading-[1.1] text-white">
+          <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
+            <h2 className="font-serif text-[28px] leading-[1.15] text-white sm:text-[36px] md:text-[44px] md:leading-[1.1]">
               Ready to Start Your Next Project?
             </h2>
-            <p className="mx-auto mt-4 max-w-[600px] text-[16px] leading-7 text-white/75">
+            <p className="mx-auto mt-4 max-w-[600px] text-[15px] leading-7 text-white/75 sm:text-[16px]">
               Connect with Pinnacle South to discuss your hospitality FF&amp;E requirements. Our
               team is ready to support your vision from concept through completion.
             </p>
