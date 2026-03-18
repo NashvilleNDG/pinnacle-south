@@ -1,0 +1,74 @@
+{
+  "benefits": [
+    {
+      "title": "Quality Assurance",
+      "description": "Every partner in our network meets rigorous quality standards before being recommended for any project."
+    },
+    {
+      "title": "Competitive Pricing",
+      "description": "Our volume relationships and long-term partnerships translate directly into cost savings for our clients."
+    },
+    {
+      "title": "Reliable Lead Times",
+      "description": "Established relationships mean priority scheduling and proactive communication when delays arise."
+    }
+  ],
+  "categories": [
+    {
+      "category": "Case Goods & Furniture",
+      "vendors": [
+        {
+          "initials": "KH",
+          "name": "Kimball Hospitality",
+          "categoryTag": "CASE GOODS & FURNITURE",
+          "description": "One of the largest hospitality furniture suppliers in North America. Specializes in custom hotel furniture, guest room casegoods, and lobby and lounge seating."
+        },
+        {
+          "initials": "CF",
+          "name": "Charter Furniture",
+          "categoryTag": "CASE GOODS & FURNITURE",
+          "description": "A hospitality-focused supplier of case goods and furniture solutions for hotel guest rooms and public spaces."
+        }
+      ]
+    },
+    {
+      "category": "FF&E Procurement Partners",
+      "vendors": [
+        {
+          "initials": "BW",
+          "name": "Benjamin West",
+          "categoryTag": "FF&E PROCUREMENT PARTNERS",
+          "description": "A global leader in FF&E and OS&E procurement. Operates in 40+ countries with large hotel development projects. Handles vendor sourcing, cost negotiation, and procurement management."
+        },
+        {
+          "initials": "CH",
+          "name": "Curve Hospitality",
+          "categoryTag": "FF&E PROCUREMENT PARTNERS",
+          "description": "Provides end-to-end FF&E solutions with design coordination, furniture sourcing, and installation support. Known for turnkey hotel project execution."
+        }
+      ]
+    },
+    {
+      "category": "Soft Goods & Textiles",
+      "vendors": [
+        {
+          "initials": "V",
+          "name": "Valley Forge Fabrics",
+          "categoryTag": "SOFT GOODS & TEXTILES",
+          "description": "One of the largest hospitality textile suppliers. Offers bedding, drapery fabrics, and upholstery textiles. Known for sustainability and brand compliance."
+        }
+      ]
+    },
+    {
+      "category": "Lighting & Fixtures",
+      "vendors": [
+        {
+          "initials": "VC",
+          "name": "Visual Comfort & Co.",
+          "categoryTag": "LIGHTING & FIXTURES",
+          "description": "A premium brand known for decorative and architectural lighting. Offers guest room lighting, lobby chandeliers, wall sconces and table lamps, and designer collections."
+        }
+      ]
+    }
+  ]
+}

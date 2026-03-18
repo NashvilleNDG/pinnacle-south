@@ -1,0 +1,58 @@
+{
+  "segments": [
+    {
+      "title": "Select-Service",
+      "description": "Efficient properties with targeted amenities for business and leisure travelers seeking consistent quality."
+    },
+    {
+      "title": "Extended-Stay",
+      "description": "Suite-style properties designed for longer-term guests, requiring specialized FF&E including kitchen and living areas."
+    },
+    {
+      "title": "Full-Service",
+      "description": "Premium properties offering comprehensive amenities, demanding the highest level of FF&E specification and execution."
+    }
+  ],
+  "brandGroups": [
+    {
+      "group": "Marriott International",
+      "brands": [
+        {
+          "initials": "Cb",
+          "name": "Courtyard by Marriott",
+          "logo": "/images/Courtyard-marriott-logo.png",
+          "description": "A leading select-service brand offering smart, stylish spaces designed for the modern traveler. Pinnacle South has supported multiple Courtyard properties across the Southeast."
+        },
+        {
+          "initials": "M",
+          "name": "Marriott",
+          "logo": "/images/marriott-logo-transparent.png",
+          "description": "The flagship Marriott brand represents full-service excellence. Pinnacle South's experience with Marriott properties demonstrates our capability in premium hospitality FF&E."
+        }
+      ]
+    },
+    {
+      "group": "Hilton Worldwide",
+      "brands": [
+        {
+          "initials": "HS",
+          "name": "Homewood Suites",
+          "logo": "/images/homewood-logo.png",
+          "description": "An upscale extended-stay brand offering spacious suite-style accommodations. Our team specializes in the unique FF&E requirements of extended-stay properties."
+        },
+        {
+          "initials": "HI",
+          "name": "Hampton Inn & Suites",
+          "logo": "/images/hampton-inn-logo.png",
+          "description": "One of the most recognized brands in the select-service segment, known for consistent quality and value. We've delivered FF&E for both new-build and renovation Hampton projects."
+        },
+        {
+          "initials": "H",
+          "name": "Hilton",
+          "logo": "/images/hilton-logo.webp",
+          "description": "A globally recognized name in hospitality, Hilton hotels demand the highest standards in furnishings and fixtures. Our team delivers with precision and reliability."
+        }
+      ]
+    }
+  ]
+}

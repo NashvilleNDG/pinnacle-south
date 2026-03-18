@@ -1,0 +1,16 @@
+Pinnacle South - Hospitality FF&E Solutions
+
+Pinnacle South is a premier FF&E procurement and project coordination company
+serving hotel owners, developers, and management companies across the United States.
+
+Pages
+
+/: Homepage with overview of services, featured projects, and process summary
+/about: Company history, core values, and team overview
+/pinnacle-process: 6-step structured procurement process
+/projects: Portfolio of completed hospitality FF&E projects
+/hotel-brands: Hotel brands served (Marriott, Hilton, Homewood Suites, etc.)
+/vendor-partners: Manufacturer and supplier network
+/insights: Industry blog and thought leadership articles
+/contact: Contact form and office information
+

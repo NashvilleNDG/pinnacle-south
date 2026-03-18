@@ -1,0 +1,82 @@
+[
+  {
+    "id": "courtyard-marriott-atlanta",
+    "slug": "courtyard-marriott-atlanta",
+    "brand": "Courtyard by Marriott",
+    "name": "Courtyard by Marriott, Atlanta",
+    "location": "Atlanta, GA",
+    "image": "/images/courtyard-marriott-atlanta.jpg",
+    "summary": "A comprehensive FF&E renovation for a premier Courtyard by Marriott location in the heart of Atlanta, delivering modern guest room furnishings and public space upgrades.",
+    "quote": "A comprehensive FF&E renovation for a premier Courtyard by Marriott location in the heart of Atlanta, delivering modern guest room furnishings and public space upgrades.",
+    "overview": "Pinnacle South was engaged to manage the full FF&E scope for a significant renovation of the Courtyard by Marriott in Atlanta, Georgia. The project encompassed guest rooms, corridors, lobby, and dining areas, requiring close coordination with the ownership group, design team, and general contractor. Our team managed vendor sourcing, procurement, logistics, and installation coordination to ensure the property met Marriott's updated brand standards while maintaining the project timeline and budget.",
+    "spotlight": "Working within a compressed renovation timeline, our team coordinated the delivery and installation of over 200 guest room packages, lobby furniture, and restaurant seating. By leveraging our established vendor relationships and proactive logistics planning, we achieved on-time delivery with minimal property disruption. The completed renovation met all Marriott brand standards and received positive feedback from ownership and property management.",
+    "services": [
+      "Design Support",
+      "Vendor Sourcing",
+      "Procurement Management",
+      "Logistics Coordination",
+      "Installation Support"
+    ],
+    "gallery": [
+      "/images/projects/courtyard-atlanta-1.jpg",
+      "/images/projects/courtyard-atlanta-2.jpg"
+    ]
+  },
+  {
+    "id": "homewood-suites-charlotte",
+    "slug": "homewood-suites-charlotte",
+    "brand": "Homewood Suites",
+    "name": "Homewood Suites, Charlotte",
+    "location": "Charlotte, NC",
+    "image": "/images/homewood-suites-charlotte.png",
+    "summary": "",
+    "quote": "",
+    "overview": "",
+    "spotlight": "",
+    "services": ["Design Support", "Vendor Sourcing", "Procurement Management"],
+    "gallery": []
+  },
+  {
+    "id": "courtyard-marriott-nashville",
+    "slug": "courtyard-marriott-nashville",
+    "brand": "Courtyard by Marriott",
+    "name": "Courtyard by Marriott, Nashville",
+    "location": "Nashville, TN",
+    "image": "/images/courtyard-marriott-nashville.jpg",
+    "summary": "",
+    "quote": "",
+    "overview": "",
+    "spotlight": "",
+    "services": [],
+    "gallery": []
+  },
+  {
+    "id": "homewood-suites-new-orleans",
+    "slug": "homewood-suites-new-orleans",
+    "brand": "Homewood Suites",
+    "name": "Homewood Suites, New Orleans",
+    "location": "New Orleans, LA",
+    "image": "/images/projects/homewood-new-orleans.jpg",
+    "summary": "",
+    "quote": "",
+    "overview": "",
+    "spotlight": "",
+    "services": [],
+    "gallery": []
+  },
+  {
+    "id": "hampton-inn-suites-tampa",
+    "slug": "hampton-inn-suites-tampa",
+    "brand": "Hampton Inn & Suites",
+    "name": "Hampton Inn & Suites, Tampa",
+    "location": "Tampa, FL",
+    "image": "/images/projects/hampton-tampa.jpg",
+    "summary": "",
+    "quote": "",
+    "overview": "",
+    "spotlight": "",
+    "services": [],
+    "gallery": []
+  }
+]
+
