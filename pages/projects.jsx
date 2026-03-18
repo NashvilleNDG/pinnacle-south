@@ -276,7 +276,7 @@ export default function ProjectsPage({ projects: projectList }) {
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-sm bg-copper px-8 py-3 text-[14px] font-semibold text-white hover:opacity-95 transition-opacity"
+                className="inline-flex items-center justify-center gap-2 rounded-sm bg-[#AC7B4A] px-8 py-3 text-[14px] font-semibold text-white transition-colors hover:bg-[#8f6438]"
               >
                 Discuss a Project <ArrowRight className="h-4 w-4" />
               </Link>

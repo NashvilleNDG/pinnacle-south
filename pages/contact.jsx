@@ -63,7 +63,7 @@ export default function ContactPage() {
             >
               <motion.div
                 variants={fadeInUp}
-                className="text-[13.75px] uppercase tracking-[0.22em] text-[#A68770]"
+                className="text-[13.75px] uppercase tracking-[0.22em] text-[#AC7B4A]"
               >
                 Get in Touch
               </motion.div>
@@ -245,17 +245,17 @@ export default function ContactPage() {
                 className="rounded-sm border border-[#15203A] bg-[#15203A] p-8 shadow-[0_4px_14px_rgba(0,0,0,0.12)]"
               >
                 <div className="flex items-center gap-3">
-                  <div className="h-px w-8 shrink-0 bg-[#C4A27B]" aria-hidden />
-                  <h2 className="text-[11px] font-medium uppercase tracking-[0.2em] text-[#C4A27B]">
+                  <div className="h-px w-8 shrink-0 bg-[#AC7B4A]" aria-hidden />
+                  <h2 className="text-[11px] font-medium uppercase tracking-[0.2em] text-[#AC7B4A]">
                     Contact Details
                   </h2>
                 </div>
 
                 <div className="mt-6 space-y-6">
                   <div className="flex items-start gap-3">
-                    <Phone className="mt-0.5 h-5 w-5 shrink-0 text-[#C4A27B]" strokeWidth={1.5} />
+                    <Phone className="mt-0.5 h-5 w-5 shrink-0 text-[#AC7B4A]" strokeWidth={1.5} />
                     <div>
-                      <div className="text-[11px] font-medium uppercase tracking-[0.15em] text-[#C4A27B]">
+                      <div className="text-[11px] font-medium uppercase tracking-[0.15em] text-[#AC7B4A]">
                         Call Us
                       </div>
                       <div className="mt-1 text-[15px] font-semibold leading-snug text-white">
@@ -267,9 +267,9 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <Mail className="mt-0.5 h-5 w-5 shrink-0 text-[#C4A27B]" strokeWidth={1.5} />
+                    <Mail className="mt-0.5 h-5 w-5 shrink-0 text-[#AC7B4A]" strokeWidth={1.5} />
                     <div>
-                      <div className="text-[11px] font-medium uppercase tracking-[0.15em] text-[#C4A27B]">
+                      <div className="text-[11px] font-medium uppercase tracking-[0.15em] text-[#AC7B4A]">
                         Email Us
                       </div>
                       <div className="mt-1 text-[15px] font-semibold leading-snug text-white">
@@ -279,9 +279,9 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[#C4A27B]" strokeWidth={1.5} />
+                    <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[#AC7B4A]" strokeWidth={1.5} />
                     <div>
-                      <div className="text-[11px] font-medium uppercase tracking-[0.15em] text-[#C4A27B]">
+                      <div className="text-[11px] font-medium uppercase tracking-[0.15em] text-[#AC7B4A]">
                         Our Offices
                       </div>
                       <div className="mt-1 text-[15px] font-semibold leading-snug text-white">
@@ -292,9 +292,9 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <Clock className="mt-0.5 h-5 w-5 shrink-0 text-[#C4A27B]" strokeWidth={1.5} />
+                    <Clock className="mt-0.5 h-5 w-5 shrink-0 text-[#AC7B4A]" strokeWidth={1.5} />
                     <div>
-                      <div className="text-[11px] font-medium uppercase tracking-[0.15em] text-[#C4A27B]">
+                      <div className="text-[11px] font-medium uppercase tracking-[0.15em] text-[#AC7B4A]">
                         Business Hours
                       </div>
                       <div className="mt-1 text-[15px] font-semibold leading-snug text-white">
@@ -376,7 +376,7 @@ export default function ContactPage() {
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:justify-center">
               <Link
                 href="tel:+18007819010"
-                className="inline-flex items-center justify-center rounded-sm bg-[#B8977E] px-8 py-3 text-[14px] font-semibold text-white hover:opacity-95 transition-opacity"
+                className="inline-flex items-center justify-center rounded-sm bg-[#AC7B4A] px-8 py-3 text-[14px] font-semibold text-white transition-colors hover:bg-[#8f6438]"
               >
                 Call (800) 781-9010
               </Link>

@@ -6,13 +6,13 @@ export default function Footer() {
     <footer className="bg-[#0A1D3A] text-white">
       <div className="mx-auto max-w-7xl px-4 pt-14 pb-10 sm:px-6 sm:pt-20 sm:pb-14">
         <div className="grid gap-10 text-center sm:gap-14 md:grid-cols-2 md:text-left lg:grid-cols-4">
-          <section aria-label="Footer about" className="flex flex-col items-center md:items-start">
+          <section aria-label="Footer about" className="flex flex-col items-center text-center">
             <img
               src="/images/logo-transparent.png"
               alt="Pinnacle South logo"
               className="h-12 w-auto brightness-0 invert"
             />
-            <p className="mt-6 max-w-sm text-[13px] leading-7 text-white/90">
+            <p className="mt-6 max-w-sm text-center text-[13px] leading-7 text-white/90 md:text-left">
               Pinnacle South delivers premium FF&amp;E solutions for hospitality projects through thoughtful
               planning, sourcing, procurement, and execution support.
             </p>
@@ -22,7 +22,7 @@ export default function Footer() {
             aria-label="Footer quick links"
             className="flex flex-col items-center md:items-start"
           >
-            <div className="text-[11px] font-medium uppercase tracking-[0.18em] text-[#A68770]">
+            <div className="text-[11px] font-medium uppercase tracking-[0.18em] text-[#AC7B4A]">
               QUICK LINKS
             </div>
             <ul className="mt-6 space-y-3 text-[13px] leading-7 text-white/90">
@@ -48,12 +48,12 @@ export default function Footer() {
             aria-label="Footer contact"
             className="flex flex-col items-center md:items-start"
           >
-            <div className="text-[11px] font-medium uppercase tracking-[0.18em] text-[#A68770]">
+            <div className="text-[11px] font-medium uppercase tracking-[0.18em] text-[#AC7B4A]">
               CONTACT
             </div>
             <div className="mt-6 space-y-4 text-[13px] leading-7 text-white/90">
               <div className="flex gap-3 justify-center md:justify-start">
-                <MapPin className="mt-[3px] h-4 w-4 shrink-0 text-[#A68770]" aria-hidden="true" />
+                <MapPin className="mt-[3px] h-4 w-4 shrink-0 text-[#AC7B4A]" aria-hidden="true" />
                 <div>
                   Griffin, Georgia<br />
                   Franklin, Tennessee
@@ -61,7 +61,7 @@ export default function Footer() {
               </div>
 
               <div className="flex gap-3 justify-center md:justify-start">
-                <Phone className="mt-[3px] h-4 w-4 shrink-0 text-[#A68770]" aria-hidden="true" />
+                <Phone className="mt-[3px] h-4 w-4 shrink-0 text-[#AC7B4A]" aria-hidden="true" />
                 <div>
                   <a className="hover:text-white transition-colors" href="tel:+18007819010">
                     (800) 781-9010
@@ -74,7 +74,7 @@ export default function Footer() {
               </div>
 
               <div className="flex gap-3 justify-center md:justify-start">
-                <Mail className="mt-[3px] h-4 w-4 shrink-0 text-[#A68770]" aria-hidden="true" />
+                <Mail className="mt-[3px] h-4 w-4 shrink-0 text-[#AC7B4A]" aria-hidden="true" />
                 <div>
                   <a className="hover:text-white transition-colors" href="mailto:info@pinnaclesouth.net">
                     info@pinnaclesouth.net
@@ -88,7 +88,7 @@ export default function Footer() {
             aria-label="Footer start a project"
             className="flex flex-col items-center md:items-start"
           >
-            <div className="text-[11px] font-medium uppercase tracking-[0.18em] text-[#A68770]">
+            <div className="text-[11px] font-medium uppercase tracking-[0.18em] text-[#AC7B4A]">
               START A PROJECT
             </div>
             <p className="mt-6 text-[13px] leading-7 text-white/90">
@@ -97,7 +97,7 @@ export default function Footer() {
             </p>
             <Link
               href="/contact"
-              className="mt-6 inline-flex rounded-sm bg-[#A68770] px-6 py-3 text-[13px] font-semibold text-white hover:opacity-95 transition-opacity"
+              className="mt-6 inline-flex rounded-sm bg-[#AC7B4A] px-6 py-3 text-[13px] font-semibold text-white transition-colors hover:bg-[#8f6438]"
             >
               Request a Consultation
             </Link>

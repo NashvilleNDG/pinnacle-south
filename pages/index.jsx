@@ -166,11 +166,10 @@ export default function HomePage({ featuredProjects, latestPosts }) {
               variants={containerStagger}
               initial="hidden"
               animate="show"
-              className="max-w-3xl"
+              className="max-w-3xl text-center md:text-left"
             >
-              <motion.div variants={itemFade} className="inline-flex items-center gap-3">
-                <span className="h-px w-8 bg-[#B8977E]" aria-hidden="true" />
-                <span className="text-[15px] uppercase tracking-eyebrow text-[#B8977E]">
+              <motion.div variants={itemFade}>
+                <span className="text-[15px] uppercase tracking-eyebrow text-[#AC7B4A]">
                   Hospitality FF&amp;E Solutions
                 </span>
               </motion.div>
@@ -185,16 +184,16 @@ export default function HomePage({ featuredProjects, latestPosts }) {
 
               <motion.p
                 variants={itemFade}
-                className="mt-4 sm:mt-6 max-w-[480px] text-[16px] leading-[1.7] text-white/90 sm:text-[18px]"
+                className="mx-auto mt-4 max-w-[480px] text-[16px] leading-[1.7] text-white/90 sm:mt-6 sm:text-[18px] md:mx-0"
               >
                 Pinnacle South partners with leading hotel brands to deliver design-driven,
                 procurement-focused, and execution-ready FF&amp;E solutions across the Southeast.
               </motion.p>
 
-              <motion.div variants={itemFade} className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <motion.div variants={itemFade} className="mt-8 flex flex-col items-center gap-4 sm:flex-row md:items-start">
                 <Link
                   href="/projects"
-                  className="inline-flex items-center justify-center gap-2 rounded-sm bg-[#A68770] px-8 py-3 text-[14px] font-semibold text-white hover:opacity-95 transition-opacity"
+                  className="inline-flex items-center justify-center gap-2 rounded-sm bg-[#AC7B4A] px-8 py-3 text-[14px] font-semibold text-white transition-colors hover:bg-[#8f6438]"
                 >
                   View Our Work <ArrowRight className="h-4 w-4" />
                 </Link>
@@ -237,8 +236,8 @@ export default function HomePage({ featuredProjects, latestPosts }) {
         <section className="bg-white border-b border-border">
           <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 sm:py-6">
             <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
-              <div className="flex shrink-0 items-center gap-6">
-                <div className="text-[11px] uppercase tracking-[0.28em] text-processMuted leading-4">
+              <div className="flex shrink-0 items-center justify-center gap-6 md:justify-start">
+                <div className="text-center text-[11px] uppercase tracking-[0.28em] text-processMuted leading-4 md:text-left">
                   <div>TRUSTED BY LEADING</div>
                   <div>HOSPITALITY BRANDS</div>
                 </div>
@@ -298,10 +297,10 @@ export default function HomePage({ featuredProjects, latestPosts }) {
               {...fadeInUp}
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
+              className="text-center md:text-left"
             >
-              <div className="inline-flex items-center gap-3">
-                <span className="h-px w-8 bg-[#B8977E]" aria-hidden="true" />
-                <span className="text-[12px] uppercase tracking-eyebrow text-[#B8977E]">
+              <div>
+                <span className="text-[12px] uppercase tracking-eyebrow text-[#AC7B4A]">
                   About Pinnacle South
                 </span>
               </div>
@@ -319,7 +318,7 @@ export default function HomePage({ featuredProjects, latestPosts }) {
                 support, we help hotel owners and developers achieve the vision behind every
                 property.
               </p>
-              <div className="mt-8">
+              <div className="mt-8 flex justify-center md:justify-start">
                 <Link
                   href="/about"
                   className="inline-flex items-center gap-2 text-[14px] font-medium text-copper hover:underline"
@@ -336,7 +335,7 @@ export default function HomePage({ featuredProjects, latestPosts }) {
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <motion.div {...fadeInUp} className="text-center">
               <div className="inline-flex items-center gap-3 justify-center">
-                <span className="text-[12px] uppercase tracking-eyebrow text-[#B8977E]">
+                <span className="text-[12px] uppercase tracking-eyebrow text-[#AC7B4A]">
                   Our Process
                 </span>
               </div>
@@ -372,7 +371,7 @@ export default function HomePage({ featuredProjects, latestPosts }) {
                     >
                         <div className="flex flex-col items-center text-center gap-4">
                           <div className="grid h-14 w-14 place-items-center rounded-md bg-[#0A1D3A]">
-                            <Icon className="h-6 w-6 text-[#B8977E]" />
+                            <Icon className="h-6 w-6 text-[#AC7B4A]" />
                           </div>
 
                           <div className="text-[11px] uppercase tracking-[0.22em] text-processMuted">
@@ -405,19 +404,17 @@ export default function HomePage({ featuredProjects, latestPosts }) {
         {/* SECTION 6 — FEATURED PROJECTS */}
         <section className="bg-[#0A1D3A] py-14 sm:py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
-            <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-              <motion.div {...fadeInUp}>
-                <div className="inline-flex items-center gap-3 justify-center mx-auto md:mx-0">
-                  <span className="text-[12px] uppercase tracking-eyebrow text-[#B8977E]">
+            <div className="flex flex-col items-center gap-6 text-center">
+              <motion.div {...fadeInUp} className="flex flex-col items-center">
+                <div className="flex justify-center">
+                  <span className="text-[12px] uppercase tracking-eyebrow text-[#AC7B4A]">
                     Our Work
                   </span>
                 </div>
                 <h2 className="mt-4 font-serif text-[28px] leading-[1.15] text-white sm:mt-6 sm:text-[36px] md:text-[42px]">
                   Featured Projects
                 </h2>
-              </motion.div>
-              <motion.div {...fadeInUp}>
-                <Link href="/projects" className="text-[14px] font-medium text-white/45 hover:text-white/80">
+                <Link href="/projects" className="mt-2 inline-block text-[14px] font-medium text-white/45 hover:text-white/80">
                   View All Projects →
                 </Link>
               </motion.div>
@@ -446,7 +443,7 @@ export default function HomePage({ featuredProjects, latestPosts }) {
                     <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(15,39,68,0.92)_0%,rgba(15,39,68,0.45)_55%,rgba(0,0,0,0)_100%)] transition-colors group-hover:bg-[linear-gradient(to_top,rgba(15,39,68,0.95)_0%,rgba(15,39,68,0.55)_55%,rgba(0,0,0,0)_100%)]" />
                     <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-4 sm:p-8">
                       <div className="min-w-0">
-                        <div className="text-[11px] uppercase tracking-eyebrow text-[#B8977E]">
+                        <div className="text-[11px] uppercase tracking-eyebrow text-[#AC7B4A]">
                           {featuredProjects[0].brand}
                         </div>
                         <h3 className="mt-2 font-serif text-[20px] leading-[1.2] text-white sm:text-[28px] sm:leading-[1.15]">
@@ -488,7 +485,7 @@ export default function HomePage({ featuredProjects, latestPosts }) {
                       <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(15,39,68,0.92)_0%,rgba(15,39,68,0.45)_55%,rgba(0,0,0,0)_100%)] transition-colors group-hover:bg-[linear-gradient(to_top,rgba(15,39,68,0.95)_0%,rgba(15,39,68,0.55)_55%,rgba(0,0,0,0)_100%)]" />
                       <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-4 sm:p-7">
                         <div className="min-w-0">
-                          <div className="text-[11px] uppercase tracking-eyebrow text-[#B8977E]">{p.brand}</div>
+                          <div className="text-[11px] uppercase tracking-eyebrow text-[#AC7B4A]">{p.brand}</div>
                           <h3 className="mt-2 font-serif text-[18px] leading-[1.2] text-white sm:text-[22px] sm:leading-[1.15]">{p.name}</h3>
                           <div className="mt-2 inline-flex items-center gap-2 text-[13px] text-white/70">
                             <MapPin className="h-4 w-4" /> {p.location}
@@ -513,10 +510,10 @@ export default function HomePage({ featuredProjects, latestPosts }) {
               {...fadeInUp}
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
+              className="text-center md:text-left"
             >
-              <div className="inline-flex items-center gap-3">
-                <span className="h-px w-8 bg-[#B8977E]" aria-hidden="true" />
-                <span className="text-[12px] uppercase tracking-eyebrow text-[#B8977E]">
+              <div>
+                <span className="text-[12px] uppercase tracking-eyebrow text-[#AC7B4A]">
                   Why Pinnacle South
                 </span>
               </div>
@@ -532,7 +529,7 @@ export default function HomePage({ featuredProjects, latestPosts }) {
                 builds.
               </p>
               <div className="mt-10 border-t border-border pt-6">
-                <div className="grid grid-cols-2 gap-8 max-w-xs">
+                <div className="mx-auto grid max-w-xs grid-cols-2 gap-8 md:mx-0">
                   {[
                     { value: "25+", label: "YEARS EXPERIENCE" },
                     { value: "200+", label: "PROJECTS DELIVERED" },
@@ -601,7 +598,7 @@ export default function HomePage({ featuredProjects, latestPosts }) {
                       className="flex h-full flex-col gap-3 bg-white p-5 sm:p-8"
                     >
                       <div className="flex items-start gap-3">
-                        <div className="grid h-8 w-8 place-items-center rounded-full bg-[#F4E6D8] text-[#B8977E]">
+                        <div className="grid h-8 w-8 place-items-center rounded-full bg-[#F4E6D8] text-[#AC7B4A]">
                           <Icon className="h-4 w-4" />
                         </div>
                         <h3 className="text-[15px] font-semibold text-textDark">{f.title}</h3>
@@ -618,14 +615,13 @@ export default function HomePage({ featuredProjects, latestPosts }) {
         {/* SECTION 8 — BRANDS & NETWORK */}
         <section className="bg-cream py-14 sm:py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
-            <motion.div {...fadeInUp}>
-              <div className="inline-flex items-center gap-3">
-                <span className="h-px w-8 bg-[#B8977E]" aria-hidden="true" />
-                <span className="text-[12px] uppercase tracking-eyebrow text-[#B8977E]">
+            <motion.div {...fadeInUp} className="text-center">
+              <div className="flex justify-center">
+                <span className="text-[12px] uppercase tracking-eyebrow text-[#AC7B4A]">
                   Our Network
                 </span>
               </div>
-              <h2 className="mt-4 max-w-[480px] font-serif text-[28px] leading-[1.2] text-textDark sm:mt-6 sm:text-[36px] md:text-[42px] md:leading-[1.15]">
+              <h2 className="mx-auto mt-4 max-w-[600px] font-serif text-[28px] leading-[1.2] text-textDark sm:mt-6 sm:text-[36px] md:text-[42px] md:leading-[1.15]">
                 Brands We Serve &amp; Partners We Trust
               </h2>
             </motion.div>
@@ -684,7 +680,7 @@ export default function HomePage({ featuredProjects, latestPosts }) {
             <motion.div {...fadeInUp} className="text-center">
               <div className="inline-flex items-center justify-center gap-3">
                 <span className="h-px w-10 bg-copper" aria-hidden="true" />
-                <span className="text-[12px] uppercase tracking-eyebrow text-[#2B374B]">Insights</span>
+                <span className="text-[12px] uppercase tracking-eyebrow text-[#AC7B4A]">Insights</span>
                 <span className="h-px w-10 bg-copper" aria-hidden="true" />
               </div>
               <h2 className="mt-4 font-serif text-[28px] leading-[1.2] text-textDark sm:mt-6 sm:text-[36px] md:text-[44px] md:leading-[1.1]">
@@ -770,7 +766,7 @@ export default function HomePage({ featuredProjects, latestPosts }) {
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-sm bg-[#B8977E] px-8 py-3 text-[14px] font-semibold text-white hover:opacity-95 transition-opacity"
+                className="inline-flex items-center justify-center gap-2 rounded-sm bg-[#AC7B4A] px-8 py-3 text-[14px] font-semibold text-white transition-colors hover:bg-[#8f6438]"
               >
                 Contact Pinnacle South <ArrowRight className="h-4 w-4" />
               </Link>

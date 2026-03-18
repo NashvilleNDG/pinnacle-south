@@ -70,17 +70,20 @@ export default function Header({ variant = "auto" }) {
 
   return (
     <header className={`fixed inset-x-0 top-0 z-50 transition-colors duration-200 ${bgClass}`}>
-      <nav className={`mx-auto flex max-w-7xl items-center px-6 py-5 border-b ${borderClass}`}>
-        <div className="flex-1 lg:flex-initial" aria-hidden="true" />
-        <Link href="/" className="flex shrink-0 items-center justify-center lg:justify-start" aria-label="Pinnacle South Home">
+      <nav className={`relative mx-auto flex max-w-7xl items-center justify-end border-b px-6 py-5 lg:justify-between ${borderClass}`}>
+        <Link
+          href="/"
+          className="absolute left-1/2 top-1/2 flex shrink-0 -translate-x-1/2 -translate-y-1/2 items-center lg:static lg:left-auto lg:top-auto lg:translate-x-0 lg:translate-y-0"
+          aria-label="Pinnacle South Home"
+        >
           <img
             src="/images/logo-transparent.png"
             alt="Pinnacle South logo"
             className="h-16 w-auto object-contain"
           />
         </Link>
-        <div className="ml-0 flex flex-1 items-center justify-end gap-8 lg:ml-12 lg:flex-initial">
-        <div className="hidden items-center gap-8 lg:flex">
+
+        <div className="hidden flex-1 flex items-center justify-center gap-8 lg:flex">
           <Link className={`text-[14px] font-medium ${textClass} hover:text-copper transition-colors`} href="/">
             Home
           </Link>
@@ -115,7 +118,7 @@ export default function Header({ variant = "auto" }) {
             </button>
             {isDropdownOpen ? (
               <div
-                className="absolute left-0 mt-3 w-[360px] rounded-md bg-white p-2 shadow-soft ring-1 ring-border/60"
+                className="absolute left-0 top-full z-10 mt-3 w-[360px] rounded-md bg-white p-2 shadow-soft ring-1 ring-border/60"
                 role="menu"
               >
                 {BRANDS_DROPDOWN.map((item) => {
@@ -151,24 +154,23 @@ export default function Header({ variant = "auto" }) {
           >
             Insights
           </Link>
-
-          <Link
-            href="/contact"
-            className="rounded-sm bg-[#0f2744] px-5 py-2.5 text-[14px] font-semibold text-white transition-colors hover:bg-[#1a3a5c]"
-          >
-            Get in Touch
-          </Link>
         </div>
+
+        <Link
+          href="/contact"
+          className="hidden shrink-0 rounded-sm bg-[#0f2744] px-5 py-2.5 text-[14px] font-semibold text-white transition-colors hover:bg-[#1a3a5c] lg:inline-flex"
+        >
+          Get in Touch
+        </Link>
 
         <button
           type="button"
-          className={`lg:hidden inline-flex items-center justify-center rounded-sm p-2 border ${borderClass} ${textClass}`}
+          className={`inline-flex items-center justify-center rounded-sm border p-2 ${borderClass} ${textClass} lg:hidden`}
           aria-label="Open menu"
           onClick={() => setIsMobileOpen(true)}
         >
           <Menu className="h-5 w-5" />
         </button>
-        </div>
       </nav>
 
       {isMobileOpen ? (
@@ -234,7 +236,7 @@ export default function Header({ variant = "auto" }) {
                     aria-expanded={isDropdownOpen}
                   >
                     Brands &amp; Vendors
-                    <ChevronDown className="h-4 w-4 shrink-0 text-[#A68770]" />
+                    <ChevronDown className="h-4 w-4 shrink-0 text-[#AC7B4A]" />
                   </button>
                   {isDropdownOpen ? (
                     <div className="mt-2 flex flex-col gap-1 pb-2">

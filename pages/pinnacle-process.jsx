@@ -194,15 +194,16 @@ export default function PinnacleProcessPage() {
                       {...fadeInUp}
                       initial={contentMotion.initial}
                       whileInView={contentMotion.whileInView}
+                      className="text-center md:text-left"
                     >
-                      <div className="flex items-center gap-4">
+                      <div className="flex items-center justify-center gap-4 md:justify-start">
                         <div className="grid h-14 w-14 place-items-center rounded-full bg-[#0A1D3A] text-white">
                           <Icon className="h-[22px] w-[22px] text-white" />
                         </div>
                         <div className="text-[48px] font-bold leading-none text-textDark">{s.number}</div>
                       </div>
                       <h2 className="mt-4 text-[32px] font-bold leading-[1.15] text-textDark">{s.title}</h2>
-                      <p className="mt-3 max-w-[480px] text-[16px] leading-[1.8] text-textMuted">
+                      <p className="mx-auto mt-3 max-w-[480px] text-[16px] leading-[1.8] text-textMuted md:mx-0">
                         {s.description}
                       </p>
                     </motion.div>
@@ -237,8 +238,8 @@ export default function PinnacleProcessPage() {
         <section id="why-it-matters" aria-label="Why the process matters" className="bg-white py-14 sm:py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <motion.div {...fadeInUp} className="text-center">
-              <div className="text-[12px] uppercase tracking-eyebrow text-copper">THE DIFFERENCE</div>
-              <h2 className="mt-6 font-serif text-[44px] font-bold leading-[1.1] text-textDark">
+              <div className="text-[12px] uppercase tracking-eyebrow text-[#AC7B4A]">THE DIFFERENCE</div>
+              <h2 className="mt-6 font-serif text-[28px] font-bold leading-[1.15] text-textDark md:text-[44px] md:leading-[1.1]">
                 Why the Pinnacle Process Matters
               </h2>
               <p className="mx-auto mt-6 max-w-[700px] text-[17px] leading-[1.8] text-textMuted">
@@ -304,7 +305,7 @@ export default function PinnacleProcessPage() {
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-sm bg-[#B0907A] px-8 py-3 text-[14px] font-semibold text-white hover:opacity-95 transition-opacity"
+                className="inline-flex items-center justify-center gap-2 rounded-sm bg-[#AC7B4A] px-8 py-3 text-[14px] font-semibold text-white transition-colors hover:bg-[#8f6438]"
               >
                 Discuss a Project <ArrowRight className="h-4 w-4" />
               </Link>

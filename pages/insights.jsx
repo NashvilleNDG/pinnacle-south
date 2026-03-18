@@ -166,7 +166,7 @@ export default function InsightsPage({ posts }) {
                     <div className="mt-5">
                       <Link
                         href={`/insights/${featuredPost.slug}`}
-                        className="inline-flex items-center gap-2 text-[14px] font-medium text-[#b5804a] hover:underline"
+                        className="inline-flex items-center gap-2 text-[14px] font-medium text-[#AC7B4A] hover:underline"
                       >
                         Read Article
                         <ArrowRight className="h-4 w-4" />
@@ -221,7 +221,7 @@ export default function InsightsPage({ posts }) {
                           <div className="mt-4">
                             <Link
                               href={`/insights/${post.slug}`}
-                              className="inline-flex items-center gap-2 text-[14px] font-medium text-[#b5804a] hover:underline"
+                              className="inline-flex items-center gap-2 text-[14px] font-medium text-[#AC7B4A] hover:underline"
                             >
                               Read More
                               <ArrowRight className="h-4 w-4" />

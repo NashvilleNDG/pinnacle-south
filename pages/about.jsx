@@ -85,8 +85,9 @@ export default function AboutPage() {
               {...fadeInUp}
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
+              className="text-center md:text-left"
             >
-              <div className="text-[11px] uppercase tracking-[0.22em] text-[#B0907A]">
+              <div className="text-[11px] uppercase tracking-[0.22em] text-[#AC7B4A]">
                 WHO WE ARE
               </div>
               <h2 className="mt-4 font-serif text-[40px] font-bold leading-[1.12] text-[#0A1D3A]">
@@ -133,7 +134,7 @@ export default function AboutPage() {
         <section aria-label="Comprehensive FF&E services" className="bg-white py-14 sm:py-20 md:py-24">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <motion.div {...fadeInUp} className="text-center">
-              <div className="text-[11px] uppercase tracking-[0.22em] text-[#B0907A]">
+              <div className="text-[11px] uppercase tracking-[0.22em] text-[#AC7B4A]">
                 WHAT WE DO
               </div>
               <h2 className="mt-3 font-serif text-[40px] font-bold leading-[1.12] text-[#0A1D3A]">
@@ -172,7 +173,7 @@ export default function AboutPage() {
                 <motion.article
                   key={card.title}
                   variants={itemFade}
-                  className="border border-[#e7dfd6] bg-[#FAF8F5] px-7 py-7 text-left"
+                  className="border border-[#e7dfd6] bg-[#FAF8F5] px-7 py-7 text-center md:text-left"
                 >
                   <h3 className="text-[14px] font-semibold leading-[1.3] text-[#0A1D3A]">
                     {card.title}
@@ -191,8 +192,9 @@ export default function AboutPage() {
               {...fadeInUp}
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
+              className="text-center md:text-left"
             >
-              <div className="text-[11px] uppercase tracking-[0.22em] text-[#B0907A]">
+              <div className="text-[11px] uppercase tracking-[0.22em] text-[#AC7B4A]">
                 WHY CLIENTS CHOOSE US
               </div>
               <h2 className="mt-4 font-serif text-[44px] font-bold leading-[1.1] text-[#0A1D3A]">
@@ -249,7 +251,7 @@ export default function AboutPage() {
         <section aria-label="Core values" className="bg-white py-14 sm:py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <motion.div {...fadeInUp} className="text-center">
-              <div className="text-[11px] uppercase tracking-[0.22em] text-[#B0907A]">
+              <div className="text-[11px] uppercase tracking-[0.22em] text-[#AC7B4A]">
                 OUR CORE VALUES
               </div>
               <h2 className="mt-3 font-serif text-[44px] font-bold leading-[1.12] text-[#0A1D3A]">
@@ -303,7 +305,7 @@ export default function AboutPage() {
                   >
                     <div className="flex items-start gap-5">
                       <div className="grid h-12 w-12 shrink-0 place-items-center rounded-sm bg-[#0A1D3A]">
-                        <Icon className="h-5 w-5 text-[#B8977E]" />
+                        <Icon className="h-5 w-5 text-[#AC7B4A]" />
                       </div>
                       <div>
                         <h3 className="text-[15px] font-semibold leading-[1.3] text-[#0A1D3A]">
@@ -338,7 +340,7 @@ export default function AboutPage() {
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-sm bg-[#B8977E] px-8 py-3 text-[13px] font-semibold text-white hover:opacity-95 transition-opacity"
+                className="inline-flex items-center justify-center gap-2 rounded-sm bg-[#AC7B4A] px-8 py-3 text-[13px] font-semibold text-white transition-colors hover:bg-[#8f6438]"
               >
                 Request a Consultation <ArrowRight className="h-4 w-4" />
               </Link>

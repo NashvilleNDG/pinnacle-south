@@ -102,9 +102,8 @@ export default function HotelBrandsPage() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
             >
-              <div className="inline-flex items-center gap-3">
-                <span className="h-px w-8 bg-[#b5804a]" aria-hidden="true" />
-                <span className="text-[12px] uppercase tracking-[0.22em] text-[#b5804a]">
+              <div>
+                <span className="text-[12px] uppercase tracking-[0.22em] text-[#AC7B4A]">
                   BRAND EXPERIENCE
                 </span>
               </div>
@@ -119,7 +118,7 @@ export default function HotelBrandsPage() {
               <div className="mt-6">
                 <Link
                   href="/projects"
-                  className="inline-flex items-center gap-2 text-[15px] font-medium text-[#b5804a] hover:underline"
+                  className="inline-flex items-center gap-2 text-[15px] font-medium text-[#AC7B4A] hover:underline"
                 >
                   View Our Project Portfolio
                   <ArrowRight className="h-4 w-4" />
@@ -140,7 +139,7 @@ export default function HotelBrandsPage() {
                   variants={itemFade}
                   className="border border-[#e5ddd4] bg-[#f5f0eb] p-6"
                 >
-                  <div className="border-l-4 border-[#b5804a] pl-5">
+                  <div className="border-l-4 border-[#AC7B4A] pl-5">
                     <h3 className="text-[16px] font-semibold text-[#1c2b3a]">{segment.title}</h3>
                     <p className="mt-1 text-[14px] leading-[1.7] text-[#6b7a8d]">
                       {segment.description}
@@ -173,7 +172,7 @@ export default function HotelBrandsPage() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  <div className="border-b border-[#e5ddd4] pb-4">
+                  <div className="border-b border-[#e5ddd4] pb-4 text-center">
                     <h2 className="text-[26px] font-semibold text-[#1c2b3a]">
                       {group.group}
                     </h2>
@@ -250,7 +249,7 @@ export default function HotelBrandsPage() {
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-sm bg-[#9F816D] px-8 py-3 text-[14px] font-semibold text-white hover:opacity-95 transition-opacity"
+                className="inline-flex items-center justify-center gap-2 rounded-sm bg-[#AC7B4A] px-8 py-3 text-[14px] font-semibold text-white transition-colors hover:bg-[#8f6438]"
               >
                 Contact Pinnacle South
                 <ArrowRight className="h-4 w-4" />

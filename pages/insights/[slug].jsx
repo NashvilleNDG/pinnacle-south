@@ -29,7 +29,7 @@ function PostBody({ post }) {
   ) {
     return (
       <>
-        <h3 className="mt-8 text-[20px] font-semibold text-[#B6804A]">
+        <h3 className="mt-8 text-[20px] font-semibold text-[#AC7B4A]">
           Choosing the Right FF&amp;E Procurement Partner
         </h3>
         <p className="mt-4 text-[16px] leading-[1.8] text-black">
@@ -39,7 +39,7 @@ function PostBody({ post }) {
           important decisions a hotel owner or developer can make.
         </p>
 
-        <h3 className="mt-8 text-[20px] font-semibold text-[#B6804A]">
+        <h3 className="mt-8 text-[20px] font-semibold text-[#AC7B4A]">
           Industry Experience Matters
         </h3>
         <p className="mt-4 text-[16px] leading-[1.8] text-black">
@@ -54,7 +54,7 @@ function PostBody({ post }) {
           place.
         </p>
 
-        <h3 className="mt-8 text-[20px] font-semibold text-[#B6804A]">
+        <h3 className="mt-8 text-[20px] font-semibold text-[#AC7B4A]">
           Vendor Relationships Drive Value
         </h3>
         <p className="mt-4 text-[16px] leading-[1.8] text-black">
@@ -68,7 +68,7 @@ function PostBody({ post }) {
           to your project.
         </p>
 
-        <h3 className="mt-8 text-[20px] font-semibold text-[#B6804A]">
+        <h3 className="mt-8 text-[20px] font-semibold text-[#AC7B4A]">
           Communication and Transparency
         </h3>
         <p className="mt-4 text-[16px] leading-[1.8] text-black">
@@ -81,7 +81,7 @@ function PostBody({ post }) {
           tracking of every line item from purchase order through installation.
         </p>
 
-        <h3 className="mt-8 text-[20px] font-semibold text-[#B6804A]">
+        <h3 className="mt-8 text-[20px] font-semibold text-[#AC7B4A]">
           Full-Cycle Support
         </h3>
         <p className="mt-4 text-[16px] leading-[1.8] text-black">
@@ -91,7 +91,7 @@ function PostBody({ post }) {
           transition from construction to opening.
         </p>
 
-        <h3 className="mt-8 text-[20px] font-semibold text-[#B6804A]">Conclusion</h3>
+        <h3 className="mt-8 text-[20px] font-semibold text-[#AC7B4A]">Conclusion</h3>
         <p className="mt-4 text-[16px] leading-[1.8] text-black">
           Your FF&amp;E procurement partner should function as an extension of your project team. By
           prioritizing industry experience, vendor relationships, communication, and full-cycle
@@ -105,7 +105,7 @@ function PostBody({ post }) {
   if (post.slug === "industry-trends-shaping-hospitality-ffe-projects") {
     return (
       <>
-        <h3 className="mt-8 text-[20px] font-semibold text-[#B6804A]">
+        <h3 className="mt-8 text-[20px] font-semibold text-[#AC7B4A]">
           Sustainability as a Baseline Expectation
         </h3>
         <p className="mt-4 text-[16px] leading-[1.8] text-black">
@@ -119,7 +119,7 @@ function PostBody({ post }) {
           or budget.
         </p>
 
-        <h3 className="mt-8 text-[20px] font-semibold text-[#B6804A]">
+        <h3 className="mt-8 text-[20px] font-semibold text-[#AC7B4A]">
           Technology Integration in Guest Rooms
         </h3>
         <p className="mt-4 text-[16px] leading-[1.8] text-black">
@@ -128,7 +128,7 @@ function PostBody({ post }) {
           evaluated through the lens of how guests charge, connect, and work while on property.
         </p>
 
-        <h3 className="mt-8 text-[20px] font-semibold text-[#B6804A]">
+        <h3 className="mt-8 text-[20px] font-semibold text-[#AC7B4A]">
           Flexible Public Spaces
         </h3>
         <p className="mt-4 text-[16px] leading-[1.8] text-black">
@@ -138,7 +138,7 @@ function PostBody({ post }) {
           high traffic.
         </p>
 
-        <h3 className="mt-8 text-[20px] font-semibold text-[#B6804A]">
+        <h3 className="mt-8 text-[20px] font-semibold text-[#AC7B4A]">
           Supply Chain Resilience
         </h3>
         <p className="mt-4 text-[16px] leading-[1.8] text-black">
@@ -147,7 +147,7 @@ function PostBody({ post }) {
           realistic lead times, and proactive communication when conditions change.
         </p>
 
-        <h3 className="mt-8 text-[20px] font-semibold text-[#B6804A]">
+        <h3 className="mt-8 text-[20px] font-semibold text-[#AC7B4A]">
           Aligning Trends with Brand Standards
         </h3>
         <p className="mt-4 text-[16px] leading-[1.8] text-black">
@@ -165,7 +165,7 @@ function PostBody({ post }) {
   ) {
     return (
       <>
-        <h3 className="mt-8 text-[20px] font-semibold text-[#B6804A]">
+        <h3 className="mt-8 text-[20px] font-semibold text-[#AC7B4A]">
           Service at the Center of Every Project
         </h3>
         <p className="mt-4 text-[16px] leading-[1.8] text-black">
@@ -174,7 +174,7 @@ function PostBody({ post }) {
           goal is to reduce friction for owners, developers, and operators.
         </p>
 
-        <h3 className="mt-8 text-[20px] font-semibold text-[#B6804A]">
+        <h3 className="mt-8 text-[20px] font-semibold text-[#AC7B4A]">
           Precision in Every Line Item
         </h3>
         <p className="mt-4 text-[16px] leading-[1.8] text-black">
@@ -186,7 +186,7 @@ function PostBody({ post }) {
           ensure each item arrives as expected and ready for installation.
         </p>
 
-        <h3 className="mt-8 text-[20px] font-semibold text-[#B6804A]">
+        <h3 className="mt-8 text-[20px] font-semibold text-[#AC7B4A]">
           Building Long-Term Partnerships
         </h3>
         <p className="mt-4 text-[16px] leading-[1.8] text-black">
@@ -195,7 +195,7 @@ function PostBody({ post }) {
           operational priorities so that every new engagement builds on what came before.
         </p>
 
-        <h3 className="mt-8 text-[20px] font-semibold text-[#B6804A]">
+        <h3 className="mt-8 text-[20px] font-semibold text-[#AC7B4A]">
           Collaboration with Design and Construction Teams
         </h3>
         <p className="mt-4 text-[16px] leading-[1.8] text-black">
@@ -204,7 +204,7 @@ function PostBody({ post }) {
           translating design intent into executable procurement plans.
         </p>
 
-        <h3 className="mt-8 text-[20px] font-semibold text-[#B6804A]">
+        <h3 className="mt-8 text-[20px] font-semibold text-[#AC7B4A]">
           Values that Guide Every Engagement
         </h3>
         <p className="mt-4 text-[16px] leading-[1.8] text-black">
@@ -309,16 +309,16 @@ export default function InsightDetailPage({ post, relatedPosts }) {
             >
               <div className="mb-8 flex items-center gap-6 border-b border-[#e5ddd4] pb-5 text-[14px] text-black">
                 <span className="inline-flex items-center gap-2">
-                  <Calendar className="h-4 w-4 text-[#B6804A]" />
+                  <Calendar className="h-4 w-4 text-[#AC7B4A]" />
                   <span>{post.date}</span>
                 </span>
                 <span className="inline-flex items-center gap-2">
-                  <User className="h-4 w-4 text-[#B6804A]" />
+                  <User className="h-4 w-4 text-[#AC7B4A]" />
                   <span>{post.author}</span>
                 </span>
               </div>
 
-              <p className="mb-8 text-[18px] italic font-bold leading-[1.7] text-[#B6804A]">
+              <p className="mb-8 text-[18px] italic font-bold leading-[1.7] text-[#AC7B4A]">
                 {post.excerpt}
               </p>
 
@@ -326,7 +326,7 @@ export default function InsightDetailPage({ post, relatedPosts }) {
 
               <div className="mt-10 inline-flex items-center gap-3 text-[12px] text-black">
                 <span>Category:</span>
-                <span className="rounded-sm border border-[#b5804a] px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-[#b5804a]">
+                <span className="rounded-sm border border-[#AC7B4A] px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-[#AC7B4A]">
                   {post.category}
                 </span>
               </div>
@@ -341,7 +341,7 @@ export default function InsightDetailPage({ post, relatedPosts }) {
             >
               {/* Card 1 */}
               <section className="border border-[#e5ddd4] bg-white p-6">
-                <div className="text-[11px] uppercase tracking-[0.22em] text-[#b5804a]">
+                <div className="text-[11px] uppercase tracking-[0.22em] text-[#AC7B4A]">
                   ABOUT PINNACLE SOUTH
                 </div>
                 <p className="mt-3 text-[14px] leading-[1.7] text-[#6b7a8d]">
@@ -351,7 +351,7 @@ export default function InsightDetailPage({ post, relatedPosts }) {
                 <div className="mt-3">
                   <Link
                     href="/about"
-                    className="inline-flex items-center gap-2 text-[14px] font-medium text-[#b5804a] hover:underline"
+                    className="inline-flex items-center gap-2 text-[14px] font-medium text-[#AC7B4A] hover:underline"
                   >
                     Learn More
                     <ArrowRight className="h-4 w-4" />
@@ -361,7 +361,7 @@ export default function InsightDetailPage({ post, relatedPosts }) {
 
               {/* Card 2 */}
               <section className="border border-[#e5ddd4] bg-white p-6">
-                <div className="text-[11px] uppercase tracking-[0.22em] text-[#b5804a]">
+                <div className="text-[11px] uppercase tracking-[0.22em] text-[#AC7B4A]">
                   BROWSE BY TOPIC
                 </div>
                 <div className="mt-4">
@@ -375,7 +375,7 @@ export default function InsightDetailPage({ post, relatedPosts }) {
                         }`}
                       >
                         <span>{topic}</span>
-                        <ChevronRight className="h-4 w-4 text-[#b5804a]" />
+                        <ChevronRight className="h-4 w-4 text-[#AC7B4A]" />
                       </Link>
                     )
                   )}
@@ -390,7 +390,7 @@ export default function InsightDetailPage({ post, relatedPosts }) {
                 </p>
                 <Link
                   href="/contact"
-                  className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-sm bg-[#b5804a] px-4 py-3 text-[14px] font-semibold text-white hover:opacity-95 transition-opacity"
+                  className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-sm bg-[#AC7B4A] px-4 py-3 text-[14px] font-semibold text-white transition-colors hover:bg-[#8f6438]"
                 >
                   Contact Us
                   <ArrowRight className="h-4 w-4" />

@@ -7,7 +7,7 @@ module.exports = {
         navyDark: "#0f2744",
         navyMid: "#1a3a5c",
         cream: "#f5f0eb",
-        copper: "#b5804a",
+        copper: "#AC7B4A",
         textDark: "#1c2b3a",
         textMuted: "#6b7a8d",
         border: "#e5ddd4",

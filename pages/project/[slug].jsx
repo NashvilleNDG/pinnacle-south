@@ -184,14 +184,14 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
               ) : null}
 
               {project.overview ? (
-                <section aria-label="Project overview text">
+                <section aria-label="Project overview text" className="text-center md:text-left">
                   <h2 className="mt-8 text-[24px] font-bold text-textDark">Project Overview</h2>
                   <p className="mt-4 text-[16px] leading-[1.8] text-textMuted">{project.overview}</p>
                 </section>
               ) : null}
 
               {gallery.length > 0 ? (
-                <section aria-label="Project gallery">
+                <section aria-label="Project gallery" className="text-center md:text-left">
                   <h2 className="mt-10 text-[24px] font-bold text-textDark">Project Gallery</h2>
                   <div className="mt-5 grid gap-2 grid-cols-2 md:grid-cols-3">
                     {gallery.map((src, idx) => (
@@ -266,7 +266,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
               ) : null}
 
               {project.spotlight ? (
-                <section aria-label="Project spotlight">
+                <section aria-label="Project spotlight" className="text-center md:text-left">
                   <h2 className="mt-10 text-[24px] font-bold text-textDark">Project Spotlight</h2>
                   <div className="mt-4 text-[14px] font-semibold uppercase tracking-eyebrow text-copper">
                     How We Delivered
@@ -294,7 +294,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
                   </div>
                 ) : null}
 
-                <div className="border border-border bg-white p-6">
+                <div className="border border-border bg-white p-6 text-center md:text-left">
                   <div className="mb-4 text-[11px] uppercase tracking-eyebrow text-copper">
                     PROJECT DETAILS
                   </div>
@@ -310,17 +310,19 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
                   </div>
                 </div>
 
-                <div className="bg-[#0A1D3A] p-6">
+                <div className="bg-[#0A1D3A] p-6 text-center md:text-left">
                   <h3 className="text-[18px] font-semibold text-white">Start a Similar Project</h3>
                   <p className="mt-2 text-[14px] leading-6 text-white/70">
                     Let&apos;s discuss how Pinnacle South can deliver for your next hospitality development.
                   </p>
-                  <Link
-                    href="/contact"
-                    className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-sm bg-copper py-3 text-[14px] font-semibold text-white hover:opacity-95 transition-opacity"
-                  >
-                    Get in Touch <ArrowRight className="h-4 w-4" />
-                  </Link>
+                  <div className="mt-4 flex justify-center md:justify-start">
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center justify-center gap-2 rounded-sm bg-[#AC7B4A] px-6 py-3 text-[14px] font-semibold text-white transition-colors hover:bg-[#8f6438]"
+                    >
+                      Get in Touch <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </aside>
@@ -393,7 +395,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-sm bg-copper px-8 py-3 text-[14px] font-semibold text-white hover:opacity-95 transition-opacity"
+                className="inline-flex items-center justify-center rounded-sm bg-[#AC7B4A] px-8 py-3 text-[14px] font-semibold text-white transition-colors hover:bg-[#8f6438]"
               >
                 Request a Consultation
               </Link>
