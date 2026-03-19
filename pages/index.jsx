@@ -20,14 +20,24 @@ import {
   Truck,
 } from "lucide-react";
 import Layout from "@/components/Layout";
+import GalleryCarousel from "@/components/GalleryCarousel";
 import projects from "@/data/projects.json";
 import posts from "@/data/posts.json";
 
 export async function getStaticProps() {
   const featuredProjects = projects.slice(0, 3);
   const latestPosts = posts.slice(0, 3);
+
+  // Build carousel items from every project entry (hero image + name + slug)
+  const projectHeroGallery = projects
+    .map((p) => {
+      if (!p?.image || !p?.slug || !p?.name) return null;
+      return { src: p.image, alt: p.name, slug: p.slug };
+    })
+    .filter(Boolean);
+
   return {
-    props: { featuredProjects, latestPosts },
+    props: { featuredProjects, latestPosts, projectHeroGallery },
   };
 }
 
@@ -52,7 +62,7 @@ const itemFade = {
   show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
-export default function HomePage({ featuredProjects, latestPosts }) {
+export default function HomePage({ featuredProjects, latestPosts, projectHeroGallery }) {
   const processSteps = useMemo(
     () => [
       {
@@ -609,6 +619,22 @@ export default function HomePage({ featuredProjects, latestPosts }) {
                 })}
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* SECTION 8 — OUR WORK GALLERY (Carousel + Lightbox) */}
+        <section className="bg-white py-14 sm:py-20 md:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6">
+            <motion.div {...fadeInUp} className="text-center">
+              <div className="text-[12px] uppercase tracking-eyebrow text-[#AC7B4A]">OUR WORK</div>
+              <h2 className="mt-4 font-serif text-[28px] leading-[1.2] text-textDark sm:mt-6 sm:text-[36px] md:text-[42px] md:leading-[1.15]">
+                A Glimpse of Our Work
+              </h2>
+            </motion.div>
+
+            <div className="mt-10">
+              <GalleryCarousel items={projectHeroGallery} />
+            </div>
           </div>
         </section>
 
