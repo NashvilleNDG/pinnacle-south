@@ -94,16 +94,14 @@ export default function AboutPage() {
                 A Legacy of Hospitality Excellence
               </h2>
               <p className="mt-5 text-[14px] leading-[1.95] text-textMuted">
-                Founded with a clear vision to serve the hospitality industry, Pinnacle South has grown into a
-                recognized FF&amp;E partner for hotel owners, developers, and management companies across the
-                United States. Our team brings decades of combined experience in furniture, fixtures, and
-                equipment procurement, logistics, and project coordination.
+                Pinnacle South is an owner-focused FF&amp;E partner for hospitality projects. We
+                serve as an extension of your ownership team, managing planning, procurement,
+                logistics, and installation from concept through completion.
               </p>
               <p className="mt-5 text-[14px] leading-[1.95] text-textMuted">
-                We understand that every hospitality project carries unique requirements — from brand standards
-                and design specifications to budget parameters and construction timelines. That understanding
-                shapes everything we do, allowing us to deliver results that align with our clients&apos; vision
-                and operational needs.
+                While we work directly for owners, we collaborate closely with hotel brands and
+                vendor partners to align design intent, meet brand requirements, and ensure smooth
+                project delivery.
               </p>
             </motion.div>
 

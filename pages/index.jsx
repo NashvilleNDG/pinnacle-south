@@ -130,7 +130,7 @@ export default function HomePage({ featuredProjects, latestPosts, projectHeroGal
     url: "https://www.pinnaclesouth.net",
     logo: "https://www.pinnaclesouth.net/images/logo.png",
     description:
-      "Pinnacle South partners with leading hotel brands to deliver design-driven, procurement-focused, and execution-ready FF&E solutions across the Southeast.",
+      "Pinnacle South works on behalf of ownership groups to plan and execute FF&E programs. We coordinate closely with hotel brands and vendor partners to meet brand standards, protect budgets, and keep projects on schedule.",
     address: [
       { "@type": "PostalAddress", addressLocality: "Griffin", addressRegion: "Georgia", addressCountry: "US" },
       { "@type": "PostalAddress", addressLocality: "Franklin", addressRegion: "Tennessee", addressCountry: "US" },
@@ -144,12 +144,12 @@ export default function HomePage({ featuredProjects, latestPosts, projectHeroGal
         <title>Pinnacle South | Hospitality FF&amp;E Solutions</title>
         <meta
           name="description"
-          content="Pinnacle South partners with leading hotel brands to deliver design-driven, procurement-focused, and execution-ready FF&E solutions across the Southeast."
+          content="Pinnacle South works on behalf of ownership groups to plan and execute FF&E programs, coordinating with hotel brands and vendor partners to protect budgets and keep projects on schedule."
         />
         <meta property="og:title" content="Pinnacle South | Hospitality FF&E Solutions" />
         <meta
           property="og:description"
-          content="Pinnacle South partners with leading hotel brands to deliver design-driven, procurement-focused, and execution-ready FF&E solutions across the Southeast."
+          content="Pinnacle South works on behalf of ownership groups to plan and execute FF&E programs, coordinating with hotel brands and vendor partners to protect budgets and keep projects on schedule."
         />
         <meta property="og:image" content="/images/home-hero.png" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -196,8 +196,9 @@ export default function HomePage({ featuredProjects, latestPosts, projectHeroGal
                 variants={itemFade}
                 className="mx-auto mt-4 max-w-[480px] text-[16px] leading-[1.7] text-white/90 sm:mt-6 sm:text-[18px] md:mx-0"
               >
-                Pinnacle South partners with leading hotel brands to deliver design-driven,
-                procurement-focused, and execution-ready FF&amp;E solutions across the Southeast.
+                Pinnacle South works on behalf of ownership groups to lead FF&amp;E strategy
+                and execution. Our team coordinates with hotel brands and vendor partners to
+                satisfy standards, control costs, and keep every milestone on schedule.
               </motion.p>
 
               <motion.div variants={itemFade} className="mt-8 flex flex-col items-center gap-4 sm:flex-row md:items-start">
@@ -318,15 +319,14 @@ export default function HomePage({ featuredProjects, latestPosts, projectHeroGal
                 A Trusted Partner in Hospitality FF&amp;E
               </h2>
               <p className="mt-6 text-[16px] leading-[1.8] text-textMuted">
-                For over two decades, Pinnacle South has served as a dedicated FF&amp;E partner for
-                hospitality projects across the United States. Our team brings deep industry
-                knowledge, established vendor relationships, and a client-first approach to every
-                engagement.
+                Pinnacle South works on behalf of ownership groups to plan and execute FF&amp;E
+                programs. We coordinate closely with hotel brands and vendor partners to meet
+                brand standards, protect budgets, and keep projects on schedule.
               </p>
               <p className="mt-5 text-[16px] leading-[1.8] text-textMuted">
-                From initial project discovery through procurement, logistics, and installation
-                support, we help hotel owners and developers achieve the vision behind every
-                property.
+                While we work directly for owners, we collaborate closely with hotel brands and
+                vendor partners to align design intent, meet brand requirements, and ensure
+                smooth project delivery.
               </p>
               <div className="mt-8 flex justify-center md:justify-start">
                 <Link
@@ -659,14 +659,14 @@ export default function HomePage({ featuredProjects, latestPosts, projectHeroGal
                   image: "/images/hotel-brands-hero.png",
                   title: "Hotel Brands",
                   description:
-                    "Respected national flags and regional brands that trust Pinnacle South to deliver on their FF&E vision.",
+                    "We manage brand standards, review cycles, and approval workflows to keep projects moving without surprises.",
                 },
                 {
                   href: "/vendor-partners",
                   image: "/images/vendor-hero.png",
                   title: "Vendor Partners",
                   description:
-                    "A carefully curated network of manufacturers and suppliers ensuring quality and value on every project.",
+                    "We align manufacturers and suppliers to project timelines, specifications, and installation readiness.",
                 },
               ].map((c) => (
                 <motion.article

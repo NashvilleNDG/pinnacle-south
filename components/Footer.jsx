@@ -10,9 +10,9 @@ export default function Footer() {
             <img
               src="/images/logo-transparent.png"
               alt="Pinnacle South logo"
-              className="h-12 w-auto brightness-0 invert"
+              className="h-[75px] w-auto brightness-0 invert"
             />
-            <p className="mt-6 max-w-sm text-center text-[13px] leading-7 text-white/90 md:text-left">
+            <p className="mt-6 max-w-sm text-center text-[16px] leading-8 text-white/90 md:text-left">
               Pinnacle South delivers premium FF&amp;E solutions for hospitality projects through thoughtful
               planning, sourcing, procurement, and execution support.
             </p>
@@ -22,10 +22,10 @@ export default function Footer() {
             aria-label="Footer quick links"
             className="flex flex-col items-center md:items-start"
           >
-            <div className="text-[11px] font-medium uppercase tracking-[0.18em] text-[#AC7B4A]">
+            <div className="text-[14px] font-medium uppercase tracking-[0.18em] text-[#AC7B4A]">
               QUICK LINKS
             </div>
-            <ul className="mt-6 space-y-3 text-[13px] leading-7 text-white/90">
+            <ul className="mt-6 space-y-3 text-[16px] leading-8 text-white/90">
               {[
                 { href: "/about", label: "About" },
                 { href: "/pinnacle-process", label: "Pinnacle Process" },
@@ -48,10 +48,10 @@ export default function Footer() {
             aria-label="Footer contact"
             className="flex flex-col items-center md:items-start"
           >
-            <div className="text-[11px] font-medium uppercase tracking-[0.18em] text-[#AC7B4A]">
+            <div className="text-[14px] font-medium uppercase tracking-[0.18em] text-[#AC7B4A]">
               CONTACT
             </div>
-            <div className="mt-6 space-y-4 text-[13px] leading-7 text-white/90">
+            <div className="mt-6 space-y-4 text-[16px] leading-8 text-white/90">
               <div className="flex gap-3 justify-center md:justify-start">
                 <MapPin className="mt-[3px] h-4 w-4 shrink-0 text-[#AC7B4A]" aria-hidden="true" />
                 <div>
@@ -91,16 +91,16 @@ export default function Footer() {
             aria-label="Footer start a project"
             className="flex flex-col items-center md:items-start"
           >
-            <div className="text-[11px] font-medium uppercase tracking-[0.18em] text-[#AC7B4A]">
+            <div className="text-[14px] font-medium uppercase tracking-[0.18em] text-[#AC7B4A]">
               START A PROJECT
             </div>
-            <p className="mt-6 text-[13px] leading-7 text-white/90">
+            <p className="mt-6 text-[16px] leading-8 text-white/90">
               Ready to discuss your next hospitality project? Let&apos;s connect and explore how Pinnacle South
               can support your FF&amp;E needs.
             </p>
             <Link
               href="/contact"
-              className="mt-6 inline-flex rounded-sm bg-[#AC7B4A] px-6 py-3 text-[13px] font-semibold text-white transition-colors hover:bg-[#8f6438]"
+              className="mt-6 inline-flex rounded-sm bg-[#AC7B4A] px-6 py-3 text-[16px] font-semibold text-white transition-colors hover:bg-[#8f6438]"
             >
               Request a Consultation
             </Link>
@@ -109,7 +109,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/15">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-4 text-center text-[12px] text-white/90 sm:px-6 sm:py-6 md:flex-row md:items-center md:justify-between md:text-left">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-4 text-center text-[15px] text-white/90 sm:px-6 sm:py-6 md:flex-row md:items-center md:justify-between md:text-left">
           <div>© 2026 Pinnacle South. All rights reserved.</div>
           <div className="flex items-center justify-center gap-5 md:justify-end">
             <Link className="hover:text-white transition-colors" href="/privacy">

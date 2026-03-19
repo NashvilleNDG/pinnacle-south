@@ -16,13 +16,13 @@ const BRANDS_DROPDOWN = [
     href: "/hotel-brands",
     icon: Building2,
     title: "Hotel Brands",
-    subtitle: "Brand standards & experience across major flags",
+    subtitle: "We manage brand standards, review cycles, and approval workflows for owners.",
   },
   {
     href: "/vendor-partners",
     icon: Users,
     title: "Vendor Partners",
-    subtitle: "Manufacturer network supporting quality & timelines",
+    subtitle: "We align manufacturers and suppliers to project timelines and specifications.",
   },
 ];
 
@@ -70,7 +70,7 @@ export default function Header({ variant = "auto" }) {
 
   return (
     <header className={`fixed inset-x-0 top-0 z-50 transition-colors duration-200 ${bgClass}`}>
-      <nav className={`relative mx-auto flex max-w-7xl items-center justify-end border-b px-6 py-5 lg:justify-between ${borderClass}`}>
+      <nav className={`relative mx-auto flex max-w-7xl items-center justify-end border-b px-6 py-7 lg:justify-between lg:py-5 ${borderClass}`}>
         <Link
           href="/"
           className="absolute left-1/2 top-1/2 flex shrink-0 -translate-x-1/2 -translate-y-1/2 items-center lg:static lg:left-auto lg:top-auto lg:translate-x-0 lg:translate-y-0"
@@ -79,7 +79,7 @@ export default function Header({ variant = "auto" }) {
           <img
             src="/images/logo-transparent.png"
             alt="Pinnacle South logo"
-            className="h-16 w-auto object-contain"
+            className="h-20 w-auto object-contain lg:h-16"
           />
         </Link>
 
@@ -183,25 +183,26 @@ export default function Header({ variant = "auto" }) {
             aria-hidden="true"
           />
           <div className="absolute inset-0 flex flex-col bg-white">
-            <div className="flex items-center justify-between px-6 py-5 bg-[#0A1D3A]">
-              <div className="flex-1" aria-hidden="true" />
-              <Link href="/" className="flex shrink-0 items-center justify-center" aria-label="Pinnacle South Home">
+            <div className="relative flex items-center justify-end bg-[#0A1D3A] px-6 py-7">
+              <Link
+                href="/"
+                className="absolute left-1/2 top-1/2 flex shrink-0 -translate-x-1/2 -translate-y-1/2 items-center"
+                aria-label="Pinnacle South Home"
+              >
                 <img
                   src="/images/logo-transparent.png"
                   alt="Pinnacle South logo"
-                  className="h-12 w-auto object-contain brightness-0 invert"
+                  className="my-[20px] h-20 w-auto object-contain brightness-0 invert"
                 />
               </Link>
-              <div className="flex flex-1 justify-end">
-                <button
-                  type="button"
-                  className="inline-flex items-center justify-center rounded-sm p-2 text-white hover:bg-white/10 transition-colors"
-                  aria-label="Close menu"
-                  onClick={() => setIsMobileOpen(false)}
-                >
-                  <X className="h-5 w-5" />
-                </button>
-              </div>
+              <button
+                type="button"
+                className="inline-flex items-center justify-center rounded-sm p-2 text-white hover:bg-white/10 transition-colors"
+                aria-label="Close menu"
+                onClick={() => setIsMobileOpen(false)}
+              >
+                <X className="h-5 w-5" />
+              </button>
             </div>
 
             <div className="flex-1 overflow-auto px-6 py-8">
