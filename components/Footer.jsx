@@ -10,7 +10,7 @@ export default function Footer() {
             <img
               src="/images/logo-transparent.png"
               alt="Pinnacle South logo"
-              className="h-[75px] w-auto brightness-0 invert"
+              className="h-[90px] w-auto brightness-0 invert"
             />
             <p className="mt-6 max-w-sm text-center text-[16px] leading-8 text-white/90 md:text-left">
               Pinnacle South delivers premium FF&amp;E solutions for hospitality projects through thoughtful
