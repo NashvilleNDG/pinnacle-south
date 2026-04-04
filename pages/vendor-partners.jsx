@@ -108,10 +108,10 @@ export default function VendorPartnersPage() {
                 </span>
               </div>
               <h2 className="mt-3 font-serif text-[38px] font-bold leading-[1.15] text-[#1c2b3a]">
-                Partnerships Built Over Decades
+                Long-Standing Partnerships
               </h2>
               <p className="mt-4 text-[16px] leading-[1.8] text-[#6b7a8d]">
-                Over 25 years in the hospitality FF&amp;E industry, Pinnacle South has cultivated strong
+                Since 2003, Pinnacle South has cultivated strong
                 relationships with manufacturers and suppliers who share our commitment to quality,
                 reliability, and service. These partnerships are a direct benefit to every client we serve.
               </p>

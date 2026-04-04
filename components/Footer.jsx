@@ -27,13 +27,13 @@ export default function Footer() {
             </div>
             <ul className="mt-6 space-y-3 text-[16px] leading-8 text-white/90">
               {[
-                { href: "/about", label: "About" },
-                { href: "/pinnacle-process", label: "Pinnacle Process" },
-                { href: "/projects", label: "Projects" },
+                { href: "/#our-company", label: "Company" },
+                { href: "/#our-services", label: "Services" },
+                { href: "/#our-projects", label: "Projects" },
                 { href: "/hotel-brands", label: "Hotel Brands" },
                 { href: "/vendor-partners", label: "Vendor Partners" },
-                { href: "/insights", label: "Blogs" },
-                { href: "/contact", label: "Contact" },
+                { href: "/insights", label: "Insights" },
+                { href: "/#contact", label: "Contact" },
               ].map((l) => (
                 <li key={l.href}>
                   <Link className="hover:text-white transition-colors" href={l.href}>
@@ -99,7 +99,7 @@ export default function Footer() {
               can support your FF&amp;E needs.
             </p>
             <Link
-              href="/contact"
+              href="/#contact"
               className="mt-6 inline-flex rounded-sm bg-[#AC7B4A] px-6 py-3 text-[16px] font-semibold text-white transition-colors hover:bg-[#8f6438]"
             >
               Request a Consultation

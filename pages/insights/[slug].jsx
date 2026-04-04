@@ -346,7 +346,7 @@ export default function InsightDetailPage({ post, relatedPosts }) {
                 </div>
                 <p className="mt-3 text-[14px] leading-[1.7] text-[#6b7a8d]">
                   Pinnacle South is a leading hospitality FF&amp;E company serving hotel owners and
-                  developers across the Southeast for over 25 years.
+                  developers across the Southeast since 2003.
                 </p>
                 <div className="mt-3">
                   <Link

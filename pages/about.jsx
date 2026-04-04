@@ -201,7 +201,7 @@ export default function AboutPage() {
 
               <ul className="mt-8 space-y-6">
                 {[
-                  "Over 25 years of hospitality FF&E experience",
+                  "Hospitality FF&E experience since 2003",
                   "Established relationships with premium vendors and manufacturers",
                   "Proven track record with major hotel brands",
                   "Dedicated project coordination from start to finish",
@@ -227,7 +227,7 @@ export default function AboutPage() {
             >
               <div className="ml-auto grid max-w-[560px] gap-8 sm:grid-cols-2">
                 {[
-                  { value: "25+", label: "Years Experience" },
+                  { value: "2003", label: "Founded" },
                   { value: "100+", label: "Projects Delivered" },
                   { value: "5+", label: "Major Brands" },
                   { value: "50+", label: "Vendor Partners" },

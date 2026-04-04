@@ -172,7 +172,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
         </section>
 
         {/* SECTION 2 — MAIN CONTENT BODY */}
-        <section id="overview" aria-label="Project overview" className="bg-cream py-16">
+        <section id="project-content" aria-label="Project content" className="bg-cream py-16">
           <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[1.1fr_0.6fr] lg:items-start">
             <div>
               {project.quote ? (
@@ -181,13 +181,6 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
                     “{project.quote}”
                   </p>
                 </blockquote>
-              ) : null}
-
-              {project.overview ? (
-                <section aria-label="Project overview text" className="text-center md:text-left">
-                  <h2 className="mt-8 text-[24px] font-bold text-textDark">Project Overview</h2>
-                  <p className="mt-4 text-[16px] leading-[1.8] text-textMuted">{project.overview}</p>
-                </section>
               ) : null}
 
               {gallery.length > 0 ? (
@@ -263,16 +256,6 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
                     </div>
                   </div>
                 </div>
-              ) : null}
-
-              {project.spotlight ? (
-                <section aria-label="Project spotlight" className="text-center md:text-left">
-                  <h2 className="mt-10 text-[24px] font-bold text-textDark">Project Spotlight</h2>
-                  <div className="mt-4 text-[14px] font-semibold uppercase tracking-eyebrow text-copper">
-                    How We Delivered
-                  </div>
-                  <p className="mt-4 text-[16px] leading-[1.8] text-textMuted">{project.spotlight}</p>
-                </section>
               ) : null}
             </div>
 
