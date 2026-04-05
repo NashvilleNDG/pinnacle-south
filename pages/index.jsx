@@ -1,7 +1,9 @@
+import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
+  ArrowDown,
   ArrowRight,
   ArrowUpRight,
   MapPin,
@@ -40,7 +42,15 @@ const HOME_SIGNATURE_QUOTES = [
   "Great hotels start with great rooms. And great rooms start here.",
 ];
 
+const HOME_PROJECTS_PREVIEW_COUNT = 6;
+
 export default function HomePage({ projectTiles }) {
+  const [projectsExpanded, setProjectsExpanded] = useState(false);
+  const hasMoreProjects = projectTiles.length > HOME_PROJECTS_PREVIEW_COUNT;
+  const visibleProjectTiles =
+    projectsExpanded || !hasMoreProjects
+      ? projectTiles
+      : projectTiles.slice(0, HOME_PROJECTS_PREVIEW_COUNT);
   const orgJsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -481,34 +491,53 @@ export default function HomePage({ projectTiles }) {
             </motion.div>
 
             {projectTiles.length > 0 ? (
-              <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {projectTiles.map((p) => (
-                  <motion.div key={p.slug} {...fadeInUp}>
-                    <Link
-                      href={`/project/${p.slug}`}
-                      className="group relative block aspect-[4/3] overflow-hidden rounded-xl bg-gray-800"
+              <>
+                <div
+                  id="our-projects-grid"
+                  className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+                >
+                  {visibleProjectTiles.map((p) => (
+                    <motion.div key={p.slug} {...fadeInUp}>
+                      <Link
+                        href={`/project/${p.slug}`}
+                        className="group relative block aspect-[4/3] overflow-hidden rounded-xl bg-gray-800"
+                      >
+                        <img
+                          src={p.image}
+                          alt={p.name}
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#0A1D3A] via-[#0A1D3A]/40 to-transparent opacity-90 transition-opacity group-hover:opacity-95" />
+                        <div className="absolute inset-x-0 bottom-0 p-5">
+                          <div className="text-[11px] font-semibold uppercase tracking-[0.15em] text-[#AC7B4A]">
+                            {p.brand}
+                          </div>
+                          <div className="mt-1 font-serif text-[18px] font-semibold text-white">{p.name}</div>
+                          <div className="mt-2 inline-flex items-center gap-1 text-[13px] text-white/75">
+                            <MapPin className="h-3.5 w-3.5" />
+                            {p.location}
+                            <ArrowUpRight className="ml-1 h-4 w-4 opacity-0 transition-opacity group-hover:opacity-100" />
+                          </div>
+                        </div>
+                      </Link>
+                    </motion.div>
+                  ))}
+                </div>
+                {hasMoreProjects && !projectsExpanded ? (
+                  <div className="mt-10 flex justify-center">
+                    <button
+                      type="button"
+                      onClick={() => setProjectsExpanded(true)}
+                      className="inline-flex items-center justify-center gap-2 rounded-sm border border-white/35 bg-white/5 px-8 py-3.5 text-[14px] font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#AC7B4A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A1D3A]"
+                      aria-expanded={false}
+                      aria-controls="our-projects-grid"
                     >
-                      <img
-                        src={p.image}
-                        alt={p.name}
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0A1D3A] via-[#0A1D3A]/40 to-transparent opacity-90 transition-opacity group-hover:opacity-95" />
-                      <div className="absolute inset-x-0 bottom-0 p-5">
-                        <div className="text-[11px] font-semibold uppercase tracking-[0.15em] text-[#AC7B4A]">
-                          {p.brand}
-                        </div>
-                        <div className="mt-1 font-serif text-[18px] font-semibold text-white">{p.name}</div>
-                        <div className="mt-2 inline-flex items-center gap-1 text-[13px] text-white/75">
-                          <MapPin className="h-3.5 w-3.5" />
-                          {p.location}
-                          <ArrowUpRight className="ml-1 h-4 w-4 opacity-0 transition-opacity group-hover:opacity-100" />
-                        </div>
-                      </div>
-                    </Link>
-                  </motion.div>
-                ))}
-              </div>
+                      View More
+                      <ArrowDown className="h-4 w-4" aria-hidden />
+                    </button>
+                  </div>
+                ) : null}
+              </>
             ) : null}
           </div>
         </section>

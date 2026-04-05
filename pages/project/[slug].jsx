@@ -185,7 +185,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
               {gallery.length > 0 ? (
                 <section aria-label="Project gallery" className="text-center md:text-left">
                   <h2 className="mt-10 text-[24px] font-bold text-textDark">Project Gallery</h2>
-                  <div className="mt-5 grid gap-2 grid-cols-2 md:grid-cols-3">
+                  <div className="mt-5 grid grid-cols-2 gap-3 sm:gap-4">
                     {gallery.map((src, idx) => (
                       <button
                         key={src}
