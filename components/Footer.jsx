@@ -30,8 +30,6 @@ export default function Footer() {
                 { href: "/#our-company", label: "Company" },
                 { href: "/#our-services", label: "Services" },
                 { href: "/#our-projects", label: "Projects" },
-                { href: "/hotel-brands", label: "Hotel Brands" },
-                { href: "/vendor-partners", label: "Vendor Partners" },
                 { href: "/insights", label: "Insights" },
                 { href: "/#contact", label: "Contact" },
               ].map((l) => (

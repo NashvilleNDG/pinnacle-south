@@ -108,7 +108,7 @@ export default function HomePage({ projectTiles }) {
 
               <motion.h1
                 variants={itemFade}
-                className="mt-8 font-serif text-[34px] font-bold leading-[1.08] text-white sm:text-[44px] md:text-[52px] lg:text-[58px]"
+                className="mt-8 lining-nums tabular-nums font-serif text-[34px] font-bold leading-[1.08] text-white sm:text-[44px] md:text-[52px] lg:text-[58px]"
               >
                 <span className="block">3 Essential FF&amp;E Services:</span>
                 <span className="mt-1 block bg-gradient-to-r from-[#f0d4b8] via-white to-[#f0d4b8] bg-clip-text text-transparent">
@@ -339,9 +339,9 @@ export default function HomePage({ projectTiles }) {
                 </div>
                 <div className="relative mt-8 min-h-[220px] overflow-hidden rounded-xl bg-gray-200 md:mt-0 md:min-h-[280px]">
                   <img
-                    src="/images/process-hero.png"
-                    alt="FF&E procurement and project coordination"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                    src="/images/service-precisius-blog.png"
+                    alt="Business partners shaking hands after a successful procurement meeting"
+                    className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
                   />
                 </div>
               </motion.article>
@@ -361,9 +361,9 @@ export default function HomePage({ projectTiles }) {
                 >
                 <div className="relative min-h-[220px] overflow-hidden rounded-xl bg-gray-200 md:min-h-[280px]">
                   <img
-                    src="/images/contact-hero.jpg"
-                    alt="Professional hospitality FF&E installation"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                    src="/images/industry-trends-blog.png"
+                    alt="Modern hotel lobby with living wall, reception, and integrated architectural finishes"
+                    className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
                   />
                 </div>
                 <div className="mt-8 flex flex-col justify-center md:mt-0">
@@ -533,7 +533,7 @@ export default function HomePage({ projectTiles }) {
                 href="mailto:info@pinnaclesouth.net?subject=Careers%20at%20Pinnacle%20South"
                 className="mt-8 inline-flex items-center justify-center gap-2 rounded-sm bg-[#0f2744] px-8 py-3.5 text-[14px] font-semibold text-white transition-colors hover:bg-[#1a3a5c]"
               >
-                Email your résumé
+                Email Your Resume
                 <ArrowRight className="h-4 w-4" />
               </a>
             </motion.div>
