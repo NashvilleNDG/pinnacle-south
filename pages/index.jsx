@@ -206,14 +206,16 @@ export default function HomePage({ projectTiles }) {
               </div>
             </motion.div>
 
-            <motion.div {...fadeInUp} className="order-1 lg:order-2 text-left">
-              <span className="text-[12px] font-semibold uppercase tracking-[0.22em] text-[#AC7B4A]">
-                Our Company
-              </span>
-              <h2 className="mt-4 font-serif text-[32px] font-bold leading-[1.15] text-textDark sm:text-[40px]">
-                Hospitality&apos;s top talent, one accountable team
-              </h2>
-              <div className="mt-8 space-y-5 text-[16px] leading-[1.85] text-textMuted">
+            <motion.div {...fadeInUp} className="order-1 lg:order-2">
+              <div className="text-center lg:text-left">
+                <span className="text-[12px] font-semibold uppercase tracking-[0.22em] text-[#AC7B4A]">
+                  Our Company
+                </span>
+                <h2 className="mt-4 font-serif text-[32px] font-bold leading-[1.15] text-textDark sm:text-[40px]">
+                  Hospitality&apos;s top talent, one accountable team
+                </h2>
+              </div>
+              <div className="mt-8 space-y-5 text-left text-[16px] leading-[1.85] text-textMuted">
                 <p>
                   The Pinnacle team includes some of hospitality&apos;s top talent, each with a unique ability
                   to enhance your hotel.

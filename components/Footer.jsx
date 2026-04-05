@@ -12,9 +12,9 @@ export default function Footer() {
               alt="Pinnacle South logo"
               className="h-[90px] w-auto brightness-0 invert"
             />
-            <p className="mt-6 max-w-sm text-center text-[16px] leading-8 text-white/90 md:text-left">
-              Pinnacle South delivers premium FF&amp;E solutions for hospitality projects through thoughtful
-              Design, Purchasing, Installation
+            <p className="mt-6 max-w-sm break-words text-center text-[16px] leading-8 text-white/90 md:max-w-md md:text-left">
+              Pinnacle South provides end-to-end FF&amp;E solutions for hospitality projects, covering design,
+              purchasing, and installation.
             </p>
           </section>
 
